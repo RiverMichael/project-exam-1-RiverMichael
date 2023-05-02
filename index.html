@@ -4,9 +4,168 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Flavor Files | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
-    <script defer type="module" src="js/script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/import/links.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo/small_logo.svg" />
+    <link rel="icon" href="data:;base64,=" />
+    <script defer type="module" src="js/index.js"></script>
+    <script defer src="js/components/toggleNavigation.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a href="#"
+        ><img
+          src="images/logo/color_logo-no_background.png"
+          alt="logotype for the flavor files"
+          class="logo"
+      /></a>
+      <img
+        src="images/icons/hamburger.svg"
+        alt="hamburger menu icon"
+        id="hamburger-icon"
+      />
+      <nav>
+        <ul>
+          <li><a href="#" class="active">home</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro flex">
+        <div class="container">
+          <h1>
+            A blog dedicated to exploring and celebrating the world of great
+            food
+          </h1>
+        </div>
+      </section>
+
+      <section class="featured container">
+        <div class="arrow-left">
+          <img
+            src="images/icons/arrow_left.svg"
+            alt="click to swipe left in the carousel"
+            class="icon-arrow"
+          />
+        </div>
+
+        <h2>Latest posts</h2>
+
+        <div class="featured-container split">
+          <div class="loader"></div>
+        </div>
+
+        <div class="arrow-right">
+          <img
+            src="images/icons/arrow_right.svg"
+            alt="click to swipe right in the carousel"
+            class="icon-arrow"
+          />
+        </div>
+      </section>
+
+      <section class="benefits__wrapper container split">
+        <div class="benefits flex">
+          <h2>Why you should follow our blog</h2>
+          <ul class="flex">
+            <li>Discover delicious new recipes to try at home</li>
+            <li>Learn about different cuisines and the stories behind them</li>
+            <li>Find comfort in the shared experience of food and community</li>
+            <li>
+              Expand your knowledge of flavor profiles and cooking techniques
+            </li>
+            <li>Connect with a passionate community of food lovers</li>
+            <li>Get inspired to explore new tastes and ingredients</li>
+          </ul>
+          <div class="benefits__action">
+            <button class="cta">subscribe</button>
+          </div>
+        </div>
+        <div>
+          <img
+            src="images/man_holding_caserol.jpg"
+            alt="man holding a caserol over the stove"
+            class="benefits-image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social flex">
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          aria-label="Visit our Twitter page"
+        >
+          <img
+            src="images/icons/icon_twitter.svg"
+            alt="logotype of Twitter"
+            class="icon icon-twitter"
+        /></a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          aria-label="Visit our Instagram page"
+        >
+          <img
+            src="images/icons/icon_instagram.svg"
+            alt="logotype of Instagram"
+            class="icon icon-instagram"
+        /></a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          aria-label="Visit our Facebook page"
+        >
+          <img
+            src="images/icons/icon_facebook.svg"
+            alt="logotype of Facebook"
+            class="icon icon-facebook"
+        /></a>
+      </div>
+
+      <div class="logo-bottom">
+        <a href="#">
+          <img
+            src="images/logo/small_logo-white.svg"
+            alt="logotype for the flavor files"
+            class=""
+        /></a>
+      </div>
+
+      <div class="footer-menu">
+        <ul class="flex">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="copy">
+        <p>
+          Copyright &copy; 2023 |
+          <a href="https://www.michaelriver.dev" target="_blank"
+            >Michael Nilsson</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,24 @@
+:root {
+    /* Font Family */
+    --ff-heading: "Montserrat", sans-serif ;
+    --ff-body: "Hind", sans-serif;
+
+    /* Colors */
+    --clr-white: #ffffff;
+    --clr-black: #3F423E;
+    --clr-heading: #3C493A;
+    --clr-logo: #7DA87B;
+    --clr-cta: #51804F;
+
+    /* Font weight */
+    --fw-thin: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* Font sizes */
+    --fs-100: 1rem; /* 16px */
+    --fs-200: 1.25rem; /* 20px */
+    --fs-300: 1.5rem; /* 25px */
+    --fs-400: 1.9rem; /* 31px */
+    --fs-500: 3rem; /* 48px */
+}
