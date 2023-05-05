@@ -1,14 +1,15 @@
 import { createFeaturedPostHtml } from "./createHtml.js";
 
-export const api = "https://blog.michaelriver.dev/";
-export const postBase = "wp-json/wp/v2/posts";
+const api = "https://blog.michaelriver.dev/";
+const postBase = "wp-json/wp/v2/posts";
+const embed = "?_embed";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const postsURL = api + postBase + "&_embed";
-const postDetailsURL = api + postBase + `/${id}` + "?_embed";
+export const postsURL = api + postBase + embed;
+const postDetailsURL = api + postBase + `/${id}` + embed;
 
 export async function getApi(url) {
     const response = await fetch (url);

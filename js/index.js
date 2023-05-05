@@ -1,11 +1,9 @@
-import { getApi, renderPosts } from "./components/render.js";
-import { api, postBase } from "./components/render.js";
+import { getApi, postsURL, renderPosts } from "./components/render.js";
 import { clearHtml, createSubscribeValidationHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { validateEmail } from "./components/formValidation.js";
 
 const featuredContainer = document.querySelector(".featured-container");
-
 const nextButton = document.querySelector(".arrow-right");
 const prevButton = document.querySelector(".arrow-left");
 
@@ -14,7 +12,7 @@ let postsPerPage = 3;
 
 async function getFeaturedPosts() {
     try {
-        const featuredPostsURL = api + postBase + `?page=${currentPage}&per_page=${postsPerPage}&_embed`;
+        const featuredPostsURL = postsURL + `&page=${currentPage}&per_page=${postsPerPage}`;
         const posts = await getApi(featuredPostsURL);
         
         clearHtml(featuredContainer);
