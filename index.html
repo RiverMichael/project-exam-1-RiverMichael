@@ -58,27 +58,24 @@
       </section>
 
       <section class="featured container">
-        <div class="arrow-left">
+        <button class="icon-arrow arrow-left">
           <img
             src="images/icons/arrow_left.svg"
             alt="click to swipe left in the carousel"
-            class="icon-arrow"
           />
-        </div>
+        </button>
 
         <h2>Latest posts</h2>
-
-        <div class="featured-container split">
+        <div class="featured-container">
           <div class="loader"></div>
         </div>
 
-        <div class="arrow-right">
+        <button class="icon-arrow arrow-right">
           <img
             src="images/icons/arrow_right.svg"
             alt="click to swipe right in the carousel"
-            class="icon-arrow"
           />
-        </div>
+        </button>
       </section>
 
       <section class="benefits__wrapper container split">
@@ -95,15 +92,45 @@
             <li>Get inspired to explore new tastes and ingredients</li>
           </ul>
           <div class="benefits__action">
-            <button class="cta">subscribe</button>
+            <button id="subscribe-button" class="cta">subscribe</button>
           </div>
         </div>
+
         <div>
           <img
             src="images/man_holding_caserol.jpg"
             alt="man holding a caserol over the stove"
             class="benefits-image"
           />
+        </div>
+
+        <div class="modal-overlay"></div>
+        <div class="subscribe-container">
+          <div class="subscribe-content flex">
+            <img
+              src="images/icons/close.svg"
+              alt="close this popup"
+              class="icon-close"
+            />
+            <h2>Sign up to get notifications about new posts</h2>
+            <form id="signup-form" class="split">
+              <div class="signup-form__wrapper flex">
+                <label for="signup-email" class="visually-hidden"></label>
+                <input
+                  type="email"
+                  name="signup-email"
+                  id="signup-email"
+                  placeholder="flavor@files.com"
+                />
+                <div class="subscribe-error" id="email-error">
+                  Please enter a valid email adress
+                </div>
+              </div>
+              <div>
+                <button id="signup-button" class="cta">sign up</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>

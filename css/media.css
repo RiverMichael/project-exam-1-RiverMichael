@@ -1,4 +1,4 @@
-@media (min-width: 600px) {
+    @media (min-width: 600px) {
 
     body {
         font-size: var(--fs-200);
@@ -54,6 +54,10 @@
     .intro {
         min-height: 60vh;
     }
+
+    .subscribe-container {
+        padding: 50px 50px 100px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -84,6 +88,10 @@
         gap: 30px;
     }
 
+    .featured-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .featured-post {
         box-shadow: none;
     }
@@ -101,16 +109,25 @@
     }
 
     .icon-arrow {
-        display: block;
         width: 50px;
+        margin-inline: 10px;
+        display: block;
+    }
+
+    .arrow-left {
+        opacity: 0.2;
     }
 
     .icon-arrow:hover {
         transform: scale(1.5);
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left {
         grid-area: 2;
+    }
+
+    .arrow-right {
+        grid-area: 2/3;
     }
 
     .benefits__wrapper {
@@ -139,4 +156,12 @@
         grid-area: 2/-3;
     }
     /*  */
+
+    .subscribe-success {
+        margin-top: 50px;
+    }
+
+    #signup-form {
+        align-items: flex-start;
+    }
 }
