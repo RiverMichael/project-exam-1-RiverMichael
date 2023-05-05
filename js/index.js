@@ -86,3 +86,4 @@ function subscribeValidation(event) {
         createSubscribeValidationHtml(subscribeContainer);
     };
 };
+

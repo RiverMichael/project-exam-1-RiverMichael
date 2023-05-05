@@ -90,7 +90,10 @@ input:focus-visible {
 header {
     display: flex;
     align-items: flex-start;
-    padding: 20px 20px 10px;
+    padding: 20px;
+    width: 100%;
+    background: var(--clr-white);
+    position: fixed;
 }
 
 .logo {
@@ -103,7 +106,7 @@ header {
 }
 
 nav {
-    top: 85px;
+    top: 90px;
     left: 0px;
     z-index: 1000;
     position: absolute;
@@ -112,6 +115,7 @@ nav {
     width: 100%;
     animation: displaynav 0.25s ease-in-out;
     transform-origin: top;
+    justify-content: center
 }
 
 @keyframes displaynav {
@@ -124,7 +128,7 @@ nav {
 }
 
 .display-nav {
-    display: block;
+    display: flex;
 }
 
 nav ul {
@@ -141,6 +145,12 @@ nav li {
     font-size: var(--fs-200);
     text-transform: uppercase;
     display: block;
+}
+
+.navlogo {
+    display: none;
+    width: 40px;
+    margin-left: auto;
 }
 /*  */
 

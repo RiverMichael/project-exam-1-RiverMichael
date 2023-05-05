@@ -24,6 +24,7 @@
     header {
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
 
     .logo {
@@ -31,19 +32,29 @@
     }
 
     nav {
-        display: block;
-        position: static;
+        top: 131px;
+        display: flex;
         animation: none;
-        width: unset;
         align-self: flex-start;
-        padding-bottom: 10px;
+        width: 100%;
+        padding: 20px;
+        justify-content: flex-start;
     }
 
     nav ul {
         flex-direction: row;
         gap: 20px;
-        padding-bottom: 0;
-        padding-inline: 0;
+        padding: unset;
+    }
+
+    .display-navlogo {
+        display: block;
+    }
+
+    .scrolled {
+        position: fixed;
+        padding-block: 20px 10px;
+        top: 0px;
     }
 
     #hamburger-icon {
