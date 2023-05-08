@@ -1,7 +1,7 @@
 a {
     color: var(--clr-black);
     text-decoration: none;
-    transition: all 0.25s;
+    transition: color 0.25s;
 }
 
 a:active {
@@ -17,6 +17,10 @@ nav li a {
     color: var(--clr-black);
 }
 
+ul a {
+    transition: opacity 0.25s;
+}
+
 nav ul:hover a, footer ul:hover a {
     opacity: 0.5;
 }
@@ -27,6 +31,10 @@ nav ul a:hover, footer ul a:hover {
 
 footer a {
     color: var(--clr-white);
+}
+
+footer ul a:active {
+    color: var(--clr-black);
 }
 
 .icon {
@@ -54,6 +62,10 @@ footer a {
     color: var(--clr-black);
 }
 
+.copy a:active {
+    color: var(--clr-cta);
+}
+
 .cta {
     font-family: var(--ff-heading);
     font-weight: var(--fw-bold);
@@ -70,11 +82,19 @@ footer a {
     transition: all 0.25s;
 }
 
-.cta:hover {
-    background: var(--clr-heading);
+.cta-dark {
+    background: var(--clr-black);
 }
 
-.cta:active {
+.cta:hover {
+    background: var(--clr-heading);
+    cursor: pointer;
+}
+
+.cta-dark:hover {
+    background: var(--clr-cta);
+}
+.cta:active, .cta-dark:active {
     background: var(--clr-white);
     color: var(--clr-heading);
     box-shadow: 0px 0px 4px var(--clr-heading);

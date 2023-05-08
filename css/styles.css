@@ -84,7 +84,7 @@ input:focus-visible {
     padding: 30px;
     margin: 20px;
     font-family: var(--ff-heading);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-bold);text-align: center;
 }
 
 /* Header */
@@ -186,7 +186,6 @@ footer li {
 
 .copy {
     font-size: var(--fs-100);
-    text-transform: uppercase;
 }
 /*  */
 

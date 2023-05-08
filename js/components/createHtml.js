@@ -26,7 +26,35 @@ export function createFeaturedPostHtml(post, parentElement) {
 };
 
 // BlogPosts Page
-export function createPostHtml(post, parentElement) {};
+export function createPostHtml(post, parentElement) {
+    const cardLink = document.createElement("a");
+    cardLink.classList.add("card-link");
+    cardLink.id = post.id;
+    cardLink.href = `blogpost.html?id=${post.id}`;
+
+    const blogPostCard = document.createElement("div");
+    blogPostCard.classList.add("card", "split");
+    cardLink.append(blogPostCard);
+
+    const cardImage = document.createElement("div");
+    cardImage.classList.add("card-image");
+    cardImage.style = `background-image: url(${post["_embedded"]["wp:featuredmedia"][0]["source_url"]})`;
+    blogPostCard.append(cardImage);
+
+    const cardContent = document.createElement("div");
+    cardContent.classList.add("card-content", "flex");
+    blogPostCard.append(cardContent);
+
+    const cardTitle = document.createElement("h2");
+    cardTitle.innerText = post.title.rendered;
+    cardContent.append(cardTitle);
+
+    const cardDescription = document.createElement("p");
+    cardDescription.innerText = post.excerpt.rendered.replace("<p>", "").replace("</p>", "");
+    cardContent.append(cardDescription);
+
+    parentElement.append(cardLink)
+};
 
 // BlogPost Details Page
 export function createPostDetailsHtml (post, parentElement) {};

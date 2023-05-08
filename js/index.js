@@ -1,4 +1,4 @@
-import { getApi, postsURL, renderPosts } from "./components/render.js";
+import { getPosts, renderFeaturedPosts, totalPages } from "./components/render.js";
 import { clearHtml, createSubscribeValidationHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { validateEmail } from "./components/formValidation.js";
@@ -11,13 +11,12 @@ const prevButton = document.querySelector(".arrow-left");
 let currentPage = 1;
 let postsPerPage = 3;
 
-async function getFeaturedPosts() {
+async function featuredPosts() {
     try {
-        const featuredPostsURL = postsURL + `&page=${currentPage}&per_page=${postsPerPage}`;
-        const posts = await getApi(featuredPostsURL);
-        
+        const posts = await getPosts(currentPage, postsPerPage);
+
         clearHtml(featuredContainer);
-        renderPosts(posts, featuredContainer);  
+        renderFeaturedPosts(posts, featuredContainer);  
     }
     catch (error) {
         console.log(error);
@@ -25,32 +24,60 @@ async function getFeaturedPosts() {
         createMessage(featuredContainer, "error", "There was an error while loading the posts, please try again");
     }
 };
-getFeaturedPosts();
+featuredPosts();
 
+
+// Show Next/Previous Posts
 nextButton.addEventListener("click", showNextPosts);
 prevButton.addEventListener("click", showPreviousPosts);
 
-function showNextPosts() {
-    if (currentPage < 4) {
+async function showNextPosts() {
+    if (currentPage < totalPages) {
         currentPage++;
-        getFeaturedPosts();
+        const posts = await getPosts(currentPage, postsPerPage);
+        clearHtml(featuredContainer);
+        renderFeaturedPosts(posts, featuredContainer);
         prevButton.style.opacity = 1;
     } 
-    if (currentPage === 4) {
-        nextButton.style.opacity = 0.2;
+    if (currentPage === totalPages) {
+        nextButton.style.opacity = 0.1;
     }
 };
 
-function showPreviousPosts() {
+async function showPreviousPosts() {
     if (currentPage > 1) {
         currentPage--;
-        getFeaturedPosts();
+        const posts = await getPosts(currentPage, postsPerPage);
+        clearHtml(featuredContainer);
+        renderFeaturedPosts(posts, featuredContainer);
         nextButton.style.opacity = 1;
     }
     if (currentPage === 1) {
-        prevButton.style.opacity = 0.2;
+        prevButton.style.opacity = 0.1;
     }
 };
+
+// function showNextPosts() {
+//     if (currentPage < totalPages) {
+//         currentPage++;
+//         featuredPosts();
+//         prevButton.style.opacity = 1;
+//     } 
+//     if (currentPage === totalPages) {
+//         nextButton.style.opacity = 0.1;
+//     }
+// };
+
+// function showPreviousPosts() {
+//     if (currentPage > 1) {
+//         currentPage--;
+//         featuredPosts();
+//         nextButton.style.opacity = 1;
+//     }
+//     if (currentPage === 1) {
+//         prevButton.style.opacity = 0.1;
+//     }
+// };
 
 
 // Subscribe Modal
