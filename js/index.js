@@ -2,6 +2,7 @@ import { getApi, postsURL, renderPosts } from "./components/render.js";
 import { clearHtml, createSubscribeValidationHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { validateEmail } from "./components/formValidation.js";
+import { openModal, closeModal } from "./components/modal.js";
 
 const featuredContainer = document.querySelector(".featured-container");
 const nextButton = document.querySelector(".arrow-right");
@@ -61,19 +62,9 @@ const form = document.querySelector("#signup-form");
 const email = document.querySelector("#signup-email");
 const emailError = document.querySelector("#email-error");
 
-subscribeButton.addEventListener("click", openModal);
-modalOverlay.addEventListener("click", closeModal);
-subscribeClose.addEventListener("click", closeModal);
-
-function openModal() {
-    subscribeContainer.style.display = "block";
-    modalOverlay.style.display = "block";
-};
-
-function closeModal() {
-    subscribeContainer.style.display = "none";
-    modalOverlay.style.display = "none";
-};
+subscribeButton.addEventListener("click", () => openModal(subscribeContainer));
+modalOverlay.addEventListener("click", () => closeModal(subscribeContainer));
+subscribeClose.addEventListener("click", () => closeModal(subscribeContainer));
 
 // Subscribe Validation
 form.addEventListener("click", subscribeValidation);
@@ -86,4 +77,3 @@ function subscribeValidation(event) {
         createSubscribeValidationHtml(subscribeContainer);
     };
 };
-

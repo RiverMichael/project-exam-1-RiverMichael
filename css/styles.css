@@ -44,6 +44,7 @@ input {
     padding: 11px;
     border: 2px solid #7DA87B;
     border-radius: 10px;
+    transition: all 0.25s;
 }
 
 input:hover {
@@ -93,7 +94,9 @@ header {
     padding: 20px;
     width: 100%;
     background: var(--clr-white);
-    position: fixed;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
 }
 
 .logo {
@@ -108,7 +111,7 @@ header {
 nav {
     top: 90px;
     left: 0px;
-    z-index: 1000;
+    z-index: 999;
     position: absolute;
     display: none;
     background: var(--clr-white);
@@ -175,27 +178,6 @@ footer li {
 .social, .footer-menu ul {
     flex-direction: row;
     gap: 20px;
-}
-
-.icon {
-    width: 40px;
-    outline: 4px solid transparent;
-    border-radius: 50%;
-    transition-property: outline-offset, outline-color;
-    transition-duration: 0.25s;
-}
-
-.icon:hover {
-    outline-color: var(--clr-white);
-    outline-offset: 4px;
-    animation: shake 0.25s;
-}
-
-@keyframes shake {
-    10%{transform: rotate(15deg);}
-    20%{transform: rotate(-15deg);}
-    30%{transform: rotate(15deg);}
-    40%{transform: rotate(-15deg);}
 }
 
 .logo-bottom {

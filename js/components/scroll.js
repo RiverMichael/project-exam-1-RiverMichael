@@ -2,7 +2,6 @@
 const nav = document.querySelector("nav");
 const navLogo = document.querySelector(".navlogo");
 
-
 function handleScroll() {
     const scrollY = window.scrollY;
 
