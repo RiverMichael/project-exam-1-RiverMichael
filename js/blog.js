@@ -2,8 +2,8 @@ import { totalPages, getPosts, renderPosts} from "./components/render.js";
 import { clearHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 
-const blogPostsContainer = document.querySelector(".blogposts-container");
-const loadPostsButton = document.querySelector(".blogposts-action button");
+const blogPostsContainer = document.querySelector(".cardcontainer");
+const loadPostsButton = document.querySelector(".blog-action button");
 const messageContainer = document.querySelector(".message");
 
 let currentPage = 1;

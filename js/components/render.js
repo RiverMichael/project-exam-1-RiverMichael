@@ -1,4 +1,4 @@
-import { createFeaturedPostHtml, createPostHtml } from "./createHtml.js";
+import { createFeaturedPostHtml, createPostDetailsHtml, createPostHtml } from "./createHtml.js";
 
 const api = "https://blog.michaelriver.dev/";
 const postBase = "wp-json/wp/v2/posts";
@@ -40,4 +40,6 @@ export function renderPosts(posts, parentElement) {
     })
 };
 
-export function renderPostDetails(post, parentElement) {};
+export function renderPostDetails(post, parentElement) {
+    return createPostDetailsHtml(post, parentElement);
+};
