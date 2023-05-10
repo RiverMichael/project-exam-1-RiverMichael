@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-.blogpost img {
+.post-image {
     border-radius: 50%;
     max-width: 280px;
     max-height: 280px;
@@ -38,14 +38,25 @@
     justify-self: center;
 }
 
-.ingredients, .instructions {
-    display: flex;
-    flex-direction: column;
+.ingredients, .instructions, .blogpost ul, .blogpost ol {
     gap: 10px;
 }
 
-ul, ol {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.blogpost ul, .blogpost ol {
+    list-style-position: inside;
+}
+
+.modal-imagecontainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: min(100% - 100px, 600px);
+    text-align: right;
+}
+
+.modal-imagecontainer .icon-close {
+    margin-bottom: 10px;
 }

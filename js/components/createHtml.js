@@ -76,16 +76,38 @@ export function createPostDetailsHtml (post, parentElement) {
     blogpost.append(postTitle);
 
     const postDescription = document.createElement("p");
+    postDescription.classList.add("description")
     postDescription.innerText = post.content.rendered.match(/<p>(?:(?!<\/p>).)*<\/p>\s*(<p>(?:(?!<\/p>).)*<\/p>)?/g)[0].replace("<p>", "").replace("</p>", "").trim();
     blogpost.append(postDescription);
 
     const postImage = document.createElement("img");
+    postImage.classList.add("post-image");
     postImage.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
     postImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
     blogpost.append(postImage);
 
+    const modalOverlay = document.createElement("div");
+    modalOverlay.classList.add("modal-overlay");
+    blogpost.append(modalOverlay);   
+
+    const imageModalContainer = document.createElement("div");
+    imageModalContainer.classList.add("modal-imagecontainer");
+    blogpost.append(imageModalContainer);
+
+    const closeModalButton = document.createElement("img");
+    closeModalButton.classList.add("icon-close");
+    closeModalButton.src = "/images/icons/close.svg";
+    closeModalButton.alt = "click to close the image";
+    imageModalContainer.append(closeModalButton);
+
+    const imageModal = document.createElement("img");
+    imageModal.classList.add("modal-image")
+    imageModal.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
+    imageModal.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
+    imageModalContainer.append(imageModal);
+
     const ingredientsContainer = document.createElement("div");
-    ingredientsContainer.classList.add("ingredients");
+    ingredientsContainer.classList.add("ingredients", "flex");
     blogpost.append(ingredientsContainer);
 
     const ingredientsHeading = document.createElement("h2");
@@ -93,6 +115,7 @@ export function createPostDetailsHtml (post, parentElement) {
     ingredientsContainer.append(ingredientsHeading);
 
     const ingredientsList = document.createElement("ul");
+    ingredientsList.classList.add("flex");
     const ul = post.content.rendered.match(/<ul>([\s\S]*?)<\/ul>/)[0];
     const ulListItems = ul.match(/<li>(.*?)<\/li>/g);
     
@@ -105,7 +128,7 @@ export function createPostDetailsHtml (post, parentElement) {
     ingredientsContainer.append(ingredientsList)
 
     const instructionsContainer = document.createElement("div");
-    instructionsContainer.classList.add("instructions");
+    instructionsContainer.classList.add("instructions", "flex");
     blogpost.append(instructionsContainer)
     
     const instructionsHeading = document.createElement("h2");
@@ -113,6 +136,7 @@ export function createPostDetailsHtml (post, parentElement) {
     instructionsContainer.append(instructionsHeading);
 
     const instructionsList = document.createElement("ol");
+    instructionsList.classList.add("flex");
     const ol = post.content.rendered.match(/<ol>([\s\S]*?)<\/ol>/)[0];
     const olListItems = ol.match(/<li>(.*?)<\/li>/g);
 

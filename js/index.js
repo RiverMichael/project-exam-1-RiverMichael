@@ -57,28 +57,6 @@ async function showPreviousPosts() {
     }
 };
 
-// function showNextPosts() {
-//     if (currentPage < totalPages) {
-//         currentPage++;
-//         featuredPosts();
-//         prevButton.style.opacity = 1;
-//     } 
-//     if (currentPage === totalPages) {
-//         nextButton.style.opacity = 0.1;
-//     }
-// };
-
-// function showPreviousPosts() {
-//     if (currentPage > 1) {
-//         currentPage--;
-//         featuredPosts();
-//         nextButton.style.opacity = 1;
-//     }
-//     if (currentPage === 1) {
-//         prevButton.style.opacity = 0.1;
-//     }
-// };
-
 
 // Subscribe Modal
 const subscribeContainer = document.querySelector(".subscribe-container");
@@ -89,9 +67,9 @@ const form = document.querySelector("#signup-form");
 const email = document.querySelector("#signup-email");
 const emailError = document.querySelector("#email-error");
 
-subscribeButton.addEventListener("click", () => openModal(subscribeContainer));
-modalOverlay.addEventListener("click", () => closeModal(subscribeContainer));
-subscribeClose.addEventListener("click", () => closeModal(subscribeContainer));
+subscribeButton.addEventListener("click", () => openModal(subscribeContainer, modalOverlay));
+modalOverlay.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
+subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
 
 // Subscribe Validation
 form.addEventListener("click", subscribeValidation);
