@@ -26,8 +26,7 @@
     <link rel="icon" type="image/x-icon" href="images/logo/small_logo.svg" />
     <link rel="icon" href="data:;base64,=" />
     <script defer type="module" src="js/index.js"></script>
-    <script defer src="js/components/toggleNavigation.js"></script>
-    <script defer src="js/components/scroll.js"></script>
+    <script defer src="js/components/navigation.js"></script>
   </head>
   <body>
     <header>
@@ -70,19 +69,22 @@
       </section>
 
       <section class="featured container">
-        <button class="icon-arrow arrow-left">
+        <h2>Latest posts</h2>
+
+        <button class="carousel-button arrow-left">
           <img
             src="images/icons/arrow_left.svg"
             alt="click to swipe left in the carousel"
           />
         </button>
 
-        <h2>Latest posts</h2>
-        <div class="featured-container">
-          <div class="loader"></div>
+        <div class="carousel split">
+          <div class="carousel-inner split">
+            <div class="loader"></div>
+          </div>
         </div>
 
-        <button class="icon-arrow arrow-right">
+        <button class="carousel-button arrow-right">
           <img
             src="images/icons/arrow_right.svg"
             alt="click to swipe right in the carousel"
@@ -117,6 +119,7 @@
         </div>
 
         <div class="modal-overlay"></div>
+
         <div class="subscribe-container">
           <div class="subscribe-content flex">
             <img
@@ -127,7 +130,7 @@
             <h2>Sign up to get notifications about new posts</h2>
             <form id="signup-form" class="split">
               <div class="signup-form__wrapper flex">
-                <label for="signup-email" class="visually-hidden"></label>
+                <label for="signup-email" class="visually-hidden">email</label>
                 <input
                   type="email"
                   name="signup-email"

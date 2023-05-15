@@ -13,9 +13,10 @@ export function createFeaturedPostHtml(post, parentElement) {
     featuredPost.classList.add("featured-post", "flex");
     featuredLink.append(featuredPost)
 
-    const featuredImage = document.createElement("div");
+    const featuredImage = document.createElement("img");
     featuredImage.classList.add("featured-image");
-    featuredImage.style = `background-image: url(${post["_embedded"]["wp:featuredmedia"][0]["source_url"]})`;
+    featuredImage.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
+    featuredImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"]
     featuredPost.append(featuredImage)
 
     const featuredTitle = document.createElement("h3");
@@ -60,7 +61,7 @@ export function createPostHtml(post, parentElement) {
     const cardButton = document.createElement("a");
     cardButton.href = `blogpost.html?id=${post.id}`;
     cardButton.classList.add("cta", "card-button");
-    cardButton.innerText = "read more";
+    cardButton.innerText = "view more";
     cardAction.append(cardButton);
 
     parentElement.append(cardLink)
@@ -85,26 +86,6 @@ export function createPostDetailsHtml (post, parentElement) {
     postImage.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
     postImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
     blogpost.append(postImage);
-
-    const modalOverlay = document.createElement("div");
-    modalOverlay.classList.add("modal-overlay");
-    blogpost.append(modalOverlay);   
-
-    const imageModalContainer = document.createElement("div");
-    imageModalContainer.classList.add("modal-imagecontainer");
-    blogpost.append(imageModalContainer);
-
-    const closeModalButton = document.createElement("img");
-    closeModalButton.classList.add("icon-close");
-    closeModalButton.src = "/images/icons/close.svg";
-    closeModalButton.alt = "click to close the image";
-    imageModalContainer.append(closeModalButton);
-
-    const imageModal = document.createElement("img");
-    imageModal.classList.add("modal-image")
-    imageModal.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
-    imageModal.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
-    imageModalContainer.append(imageModal);
 
     const ingredientsContainer = document.createElement("div");
     ingredientsContainer.classList.add("ingredients", "flex");
@@ -155,6 +136,16 @@ export function createPostDetailsHtml (post, parentElement) {
     parentElement.append(blogpost);
 };
 
+// Image Modal
+export function createImageModalHtml(post, parentElement) {
+    const imageModal = document.createElement("img");
+    imageModal.classList.add("modal-image")
+    imageModal.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
+    imageModal.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
+
+    parentElement.append(imageModal);
+};
+
 // Subscribe Validation
 export function createSubscribeValidationHtml(parentElement) {
     const validationContainer = document.createElement("div");
@@ -174,3 +165,4 @@ export function createSubscribeValidationHtml(parentElement) {
 
     parentElement.append(validationContainer);
 };
+

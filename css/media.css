@@ -16,10 +16,6 @@
         font-size: var(--fs-300);
     }
 
-    /* .container {
-        width: min(100% - 200px, 1200px);
-    } */
-
     /* Header */
     header {
         flex-direction: column;
@@ -82,31 +78,38 @@
     }
 
     .featured {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: 1fr auto 1fr;
         gap: 30px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        padding-block: 30px;
         margin-block: 100px;
     }
 
-    .featured h2 {
-        grid-area: 1/2;
+    .carousel {
+        grid-area: 2/2;
+        justify-content: center;
+        overflow: unset
     }
 
-    .featured-container {
-        grid-area: 2/2;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+    .carousel-inner {
+        gap: 20px;
         justify-content: flex-start;
+        max-width: 550px;
+        overflow: hidden;
+        margin-inline: 0;
     }
 
     .featured-post {
         box-shadow: none;
+        height: 413px;
+        width: 265px;
+        padding: 10px;
+    }
+    
+    .featured h2 {
+        grid-area: 1/2;
     }
 
-    .featured-post:hover  {
-        transform: scale(1.1);
+    .featured-post:hover {
+        transform: scale(1.05);
     }
 
     .featured-post h3 {
@@ -115,9 +118,10 @@
 
     .featured-image {
         border-radius: 20px;
+        height: 260px;
     }
 
-    .icon-arrow {
+    .carousel-button {
         width: 50px;
         margin-inline: 10px;
         display: block;
@@ -125,27 +129,25 @@
 
     .arrow-left {
         opacity: 0.1;
+        justify-self: right;
+        grid-area: 2;
     }
 
-    .icon-arrow:hover {
+    .carousel-button:hover {
         transform: scale(1.5);
     }
 
-    .icon-arrow img:hover {
+    .carousel-button img:hover {
         cursor: pointer;
-    }
-
-    .arrow-left {
-        grid-area: 2;
     }
 
     .arrow-right {
         grid-area: 2/3;
+        justify-self: left;
     }
 
     .benefits__wrapper {
         padding: 50px;
-        margin-block: 200px;
     }
     /* Footer */
     footer {
@@ -198,10 +200,10 @@
     }
 
     .card:hover {
-        transform: scale(1.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     }
 
-    .card > *, .featured-container > * {
+    .card > * {
         flex: 1;
     }
 
@@ -269,5 +271,15 @@
 @media (min-width: 1200px) {
     .container {
         width: min(100% - 200px, 1200px);
+    }
+
+    .carousel-inner {
+        max-width: 800px;
+        gap: 10px;
+    }
+
+    .featured-post {
+        width: 260px;
+        height: 440px;
     }
 }

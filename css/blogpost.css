@@ -2,9 +2,19 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    padding-inline: 20px;
+    width: fit-content;
+}
+
+.breadcrumb a {
+    color: var(--clr-cta);
     font-family: var(--ff-heading);
     font-weight: var(--fw-bold);
-    color: var(--clr-cta);
+    transition: all 0.25s;
+}
+
+.breadcrumb:hover a {
+    color: var(--clr-black);
 }
 
 .breadcrumb img {
@@ -36,6 +46,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     grid-area: 2;
     justify-self: center;
+    object-fit: cover;
 }
 
 .ingredients, .instructions, .blogpost ul, .blogpost ol {
@@ -46,17 +57,18 @@
     list-style-position: inside;
 }
 
-.modal-imagecontainer {
+.modal-content {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    width: min(100% - 100px, 600px);
+    width: min(100% - 50px, 600px);
+    margin-inline: auto;
     text-align: right;
 }
 
-.modal-imagecontainer .icon-close {
+.modal-content .icon-close {
     margin-bottom: 10px;
 }

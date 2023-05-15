@@ -16,7 +16,13 @@
 .featured {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
+    margin-inline: auto;
     margin-block: 50px;
+}
+
+.featured h2 {
+   align-self: flex-start;
 }
 
 .featured, .benefits__wrapper {
@@ -31,33 +37,28 @@
     color: var(--clr-heading);
 }
 
-.featured-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    min-height: 90px;
-    gap: 50px;
+.carousel {
     width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+    max-height: 1340px;
 }
 
-.featured-container .loader {
-    grid-area: 1/2;
-}
-
-.featured-container .error {
-    grid-column: 1/4;
-}
-
-.featured-container, .benefits h2, .benefits__action {
+.carousel, .benefits h2, .benefits__action {
     text-align: center;
 }
 
-.benefits__wrapper {
-    justify-content: center;
+.carousel-inner {
+    gap: 50px;
+    scroll-behavior: smooth;
+    height: fit-content;
+    margin-inline: 4px;
 }
 
 .featured-post {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: transform 0.25s;
+    height: 409px;
 }
 
 .featured-post, .benefits-image {
@@ -69,31 +70,36 @@
 }
 
 .featured-image {
-    background-position: center;
-    background-size: cover;
     border-radius: 20px 20px 0px 0px;
     width: 100%;
-    height: 280px;
+    height: 300px;
+    object-fit: cover;
 }
 
-.icon-arrow {
+.carousel-button {
     display: none;
     border: none;
     background: transparent;
     transition: transform 0.25s;
 }
 
-.benefits__wrapper {
-    flex-direction: column-reverse;
-    margin-block: 200px;
-}
-
 .benefits {
     gap: 20px;
 }
 
+.benefits__wrapper {
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-block: 100px;
+}
+
+.benefits h2 {
+    text-align: left;
+}
+
 .benefits ul {
     gap: 5px;
+    list-style-position: inside;
 }
 
 .benefits-image {

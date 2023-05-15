@@ -26,8 +26,7 @@
     <link rel="icon" type="image/x-icon" href="images/logo/small_logo.svg" />
     <link rel="icon" href="data:;base64,=" />
     <script defer type="module" src="js/blogpost.js"></script>
-    <script defer src="js/components/toggleNavigation.js"></script>
-    <script defer src="js/components/scroll.js"></script>
+    <script defer src="js/components/navigation.js"></script>
   </head>
   <body>
     <header>
@@ -59,20 +58,29 @@
       </nav>
     </header>
 
-    <main class="container">
-      <a href="blog.html">
-        <div class="breadcrumb flex">
+    <main>
+      <div class="breadcrumb flex">
+        <a href="blog.html">
           <img
             src="images/icons/arrow_back.svg"
             alt="go back to all blog posts"
-          />
-          <p>Back to all posts</p>
-        </div></a
-      >
+        /></a>
+        <a href="blog.html">Back to all posts</a>
+      </div>
 
-      <section class="blogpost__wrapper flex">
+      <section class="blogpost__wrapper flex container">
         <div class="loader"></div>
       </section>
+
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <img
+          src="images/icons/close.svg"
+          alt="close this popup"
+          class="icon-close"
+        />
+      </div>
     </main>
 
     <footer>

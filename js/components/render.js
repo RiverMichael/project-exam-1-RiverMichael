@@ -13,11 +13,15 @@ const postDetailsURL = api + postBase + `/${id}` + embed;
 
 export let totalPages;
 
-async function getApi(url) {
+export async function getApi(url) {
     const response = await fetch (url);
     const results = await response.json();
     totalPages = parseInt(response.headers.get('X-WP-TotalPages'));
     return results;
+};
+
+export async function getFeaturedPosts() {
+    return await getApi(postsURL);
 };
 
 export async function getPosts(currentPage, postsPerPage) {

@@ -42,7 +42,6 @@ async function showMorePosts() {
     }
     catch (error) {
         console.log(error);
-        
         clearHtml(messageContainer);
         createMessage(messageContainer, "error", "There was an error while loading the posts, please try again");
     };

@@ -1,7 +1,16 @@
-// Nav on Scroll
+const hamburgerMenu = document.querySelector("#hamburger-icon");
 const nav = document.querySelector("nav");
 const navLogo = document.querySelector(".navlogo");
 
+hamburgerMenu.addEventListener("click", toggleNavigation);
+window.addEventListener("scroll", handleScroll);
+
+// Toggle Hamburger Menu
+function toggleNavigation() {
+    nav.classList.toggle("display-nav");
+};
+
+// Nav on Scroll
 function handleScroll() {
     const scrollY = window.scrollY;
 
@@ -13,4 +22,3 @@ function handleScroll() {
         navLogo.classList.remove("display-navlogo");
     };
 };
-window.addEventListener("scroll", handleScroll);

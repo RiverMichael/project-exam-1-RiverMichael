@@ -1,27 +1,27 @@
 import { getPostDetails, renderPostDetails } from "./components/render.js";
-import { clearHtml } from "./components/createHtml.js";
+import { clearHtml, createImageModalHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { openModal, closeModal } from "./components/modal.js";
-
-const postContainer = document.querySelector(".blogpost__wrapper");
 
 async function postDetails() {
     try {
         const post = await getPostDetails();
+        const postContainer = document.querySelector(".blogpost__wrapper");
+        const modalContent = document.querySelector(".modal-content");
+        const modalOverlay = document.querySelector(".modal-overlay");
+        const closeModalButton = document.querySelector(".icon-close");
         
         document.title = `The Flavor Files | ${post.title.rendered}`;
 
         clearHtml(postContainer);
         renderPostDetails(post, postContainer);
+        createImageModalHtml(post, modalContent);
 
-        const modalOverlay = document.querySelector(".modal-overlay");
-        const imageContainer = document.querySelector(".modal-imagecontainer");
-        const closeModalButton = document.querySelector(".modal-imagecontainer .icon-close");
-        const image = document.querySelector(".blogpost img");
+        const image = document.querySelector(".post-image");
 
-        image.addEventListener("click", () => openModal(imageContainer, modalOverlay));
-        modalOverlay.addEventListener("click", () => closeModal(imageContainer, modalOverlay));
-        closeModalButton.addEventListener("click", () => closeModal(imageContainer, modalOverlay));
+        image.addEventListener("click", () => openModal(modalContent, modalOverlay));
+        modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverlay));
+        closeModalButton.addEventListener("click", () => closeModal(modalContent, modalOverlay));
     }
     catch (error) {
         console.log(error);
@@ -30,4 +30,3 @@ async function postDetails() {
     };
 };
 postDetails();
-

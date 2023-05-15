@@ -1,22 +1,45 @@
-import { getPosts, renderFeaturedPosts, totalPages } from "./components/render.js";
+import { getFeaturedPosts, renderFeaturedPosts } from "./components/render.js";
 import { clearHtml, createSubscribeValidationHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { validateEmail } from "./components/formValidation.js";
 import { openModal, closeModal } from "./components/modal.js";
 
-const featuredContainer = document.querySelector(".featured-container");
+const featuredContainer = document.querySelector(".carousel-inner");
 const nextButton = document.querySelector(".arrow-right");
 const prevButton = document.querySelector(".arrow-left");
+const subscribeContainer = document.querySelector(".subscribe-container");
+const subscribeButton = document.querySelector("#subscribe-button");
+const modalOverlay = document.querySelector(".modal-overlay");
+const subscribeClose = document.querySelector(".icon-close");
+const form = document.querySelector("#signup-form");
+const email = document.querySelector("#signup-email");
+const emailError = document.querySelector("#email-error");
 
-let currentPage = 1;
-let postsPerPage = 3;
+let slideWidth = 0;
+let currentPosition = 0;
+let maxScroll = 0;
+
+nextButton.addEventListener("click", slideRight);
+prevButton.addEventListener("click", slideLeft);
+
+subscribeButton.addEventListener("click", () => openModal(subscribeContainer, modalOverlay));
+modalOverlay.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
+subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
+form.addEventListener("click", subscribeValidation);
 
 async function featuredPosts() {
     try {
-        const posts = await getPosts(currentPage, postsPerPage);
-
+        const posts = await getFeaturedPosts();
         clearHtml(featuredContainer);
-        renderFeaturedPosts(posts, featuredContainer);  
+        renderFeaturedPosts(posts, featuredContainer); 
+
+        if (window.innerWidth >= 1200) {
+            slideWidth = featuredContainer.offsetWidth + 10;
+        } else {
+            slideWidth = featuredContainer.offsetWidth + 20;
+        }
+
+        maxScroll = featuredContainer.scrollWidth - featuredContainer.offsetWidth;
     }
     catch (error) {
         console.log(error);
@@ -26,57 +49,41 @@ async function featuredPosts() {
 };
 featuredPosts();
 
-
 // Show Next/Previous Posts
-nextButton.addEventListener("click", showNextPosts);
-prevButton.addEventListener("click", showPreviousPosts);
+function slideRight() {
+    currentPosition += slideWidth;
+    featuredContainer.scrollLeft += slideWidth;
+    toggleCarouselButtons();
+};
 
-async function showNextPosts() {
-    if (currentPage < totalPages) {
-        currentPage++;
-        const posts = await getPosts(currentPage, postsPerPage);
-        clearHtml(featuredContainer);
-        renderFeaturedPosts(posts, featuredContainer);
-        prevButton.style.opacity = 1;
-    } 
-    if (currentPage === totalPages) {
+function slideLeft() {
+    currentPosition -= slideWidth;
+    featuredContainer.scrollLeft -= slideWidth;
+    toggleCarouselButtons();
+};
+
+// Toggle Carousel Buttons
+function toggleCarouselButtons() {
+    if (currentPosition >= maxScroll) {
         nextButton.style.opacity = 0.1;
-    }
-};
-
-async function showPreviousPosts() {
-    if (currentPage > 1) {
-        currentPage--;
-        const posts = await getPosts(currentPage, postsPerPage);
-        clearHtml(featuredContainer);
-        renderFeaturedPosts(posts, featuredContainer);
+        nextButton.disabled = "true";
+    } else {
         nextButton.style.opacity = 1;
+        nextButton.disabled = "";
     }
-    if (currentPage === 1) {
+
+    if (!currentPosition) {
         prevButton.style.opacity = 0.1;
+        prevButton.disabled = "true";
+    } else {
+        prevButton.style.opacity = 1;
+        prevButton.disabled = "";
     }
 };
-
-
-// Subscribe Modal
-const subscribeContainer = document.querySelector(".subscribe-container");
-const subscribeButton = document.querySelector("#subscribe-button");
-const modalOverlay = document.querySelector(".modal-overlay");
-const subscribeClose = document.querySelector(".icon-close");
-const form = document.querySelector("#signup-form");
-const email = document.querySelector("#signup-email");
-const emailError = document.querySelector("#email-error");
-
-subscribeButton.addEventListener("click", () => openModal(subscribeContainer, modalOverlay));
-modalOverlay.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
-subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
 
 // Subscribe Validation
-form.addEventListener("click", subscribeValidation);
-
 function subscribeValidation(event) {
     event.preventDefault();
-
     if (validateEmail(email, email.value, emailError)) {
         clearHtml(subscribeContainer);
         createSubscribeValidationHtml(subscribeContainer);

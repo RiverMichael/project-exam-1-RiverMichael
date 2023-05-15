@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-white);
     font-family: var(--ff-body);
@@ -16,6 +20,10 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     font-family: var(--ff-paragraph);
+}
+
+img {
+    display: block;
 }
 
 h1, h2, h3 {
