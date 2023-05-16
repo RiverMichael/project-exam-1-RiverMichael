@@ -73,7 +73,7 @@ footer ul a:active {
 .cta {
     font-family: var(--ff-heading);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
     background: var(--clr-cta);
     color: var(--clr-white);
     padding: 12px;
@@ -101,5 +101,4 @@ footer ul a:active {
 .cta:active, .cta-dark:active {
     background: var(--clr-white);
     color: var(--clr-heading);
-    box-shadow: 0px 0px 4px var(--clr-heading);
 }

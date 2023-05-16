@@ -3,6 +3,7 @@ export function validateEmail(input, value, errorMessage) {
     const result = regEx.test(value);
    
     if (result) {
+        input.style.border = "2px solid #7DA87B";
         errorMessage.style.display = "none";
     } else {
         errorMessage.style.display = "block";
@@ -11,18 +12,14 @@ export function validateEmail(input, value, errorMessage) {
     return result
 };
 
-export function validateMinLength(value, length) {
-    if(value.trim().length >= length) {
+export function validateLength(input, value, length, errorMessage) {
+    if(value.trim().length > length) {
+        input.style.border = "2px solid #7DA87B";
+        errorMessage.style.display = "none";
         return true;
     } else {
-        return false;
-    }
-};
-
-export function validateLength(value, length) {
-    if (value.trim().length === length) {
-        return true;
-    } else {
+        errorMessage.style.display = "block";
+        input.style.border = "2px solid var(--clr-error)"
         return false;
     }
 };

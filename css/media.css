@@ -1,19 +1,19 @@
     @media (min-width: 600px) {
 
     body {
-        font-size: var(--fs-200);
+        font-size: var(--fs-300);
     }
 
     h1 {
-        font-size: var(--fs-500);
+        font-size: var(--fs-600);
     }
 
     h2 {
-        font-size: var(--fs-400);
+        font-size: var(--fs-500);
     }
 
     h3 {
-        font-size: var(--fs-300);
+        font-size: var(--fs-400);
     }
 
     /* Header */
@@ -70,6 +70,11 @@
     .about h1 {
         text-align: left;
     }
+
+    .contact-form {
+        align-items: center;
+        gap: 50px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -119,7 +124,7 @@
     }
 
     .featured-post h3 {
-        font-size: var(--fs-200);
+        font-size: var(--fs-300);
     }
 
     .featured-image {
@@ -184,7 +189,7 @@
     }
 
     #signup-form {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .blog {
@@ -267,6 +272,20 @@
 
     .instructions {
         grid-area: 3/2;
+    }
+
+    .contact {
+        padding-block: 100px 200px;
+        
+        align-items: center;
+    }
+
+    .contact-form h1 {
+        align-self: flex-start;
+    }
+
+    .contact-form input, .contact-form textarea {
+        min-width: 300px;
     }
 }
 

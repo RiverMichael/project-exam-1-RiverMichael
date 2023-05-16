@@ -15,7 +15,7 @@ body {
     background: var(--clr-white);
     font-family: var(--ff-body);
     color: var(--clr-black);
-    font-size: var(--fs-100);
+    font-size: var(--fs-200);
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -32,37 +32,36 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: var(--fs-400);
+    font-size: var(--fs-500);
     color: var(--clr-heading);
 }
 
 h2 {
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
 }
 
 h3 {
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
 }
 
 img {
     width: 100%;
 }
 
-input {
+input, textarea {
     font-size: var(--fs-200);
-    padding: 11px;
+    padding: 10px;
     border: 2px solid #7DA87B;
     border-radius: 10px;
     transition: all 0.25s;
 }
 
-input:hover {
+input:hover, textarea:hover {
     box-shadow: 0px 0px 5px var(--clr-heading);
 }
 
-input:focus-visible {
+input:focus-visible, textarea:focus-visible {
     outline: none;
-    box-shadow: 0px 0px 5px var(--clr-heading);
     background: #f4f4f4;
 }
 
@@ -154,7 +153,7 @@ nav ul {
 nav li {
     font-family: var(--ff-heading);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
     text-transform: uppercase;
     display: block;
 }
@@ -194,7 +193,7 @@ footer li {
 }
 
 .copy {
-    font-size: var(--fs-100);
+    font-size: var(--fs-200);
 }
 /*  */
 
