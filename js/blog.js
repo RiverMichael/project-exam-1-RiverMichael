@@ -9,6 +9,8 @@ const messageContainer = document.querySelector(".message");
 let currentPage = 1;
 let postsPerPage = 10;
 
+loadPostsButton.addEventListener("click", showMorePosts);
+
 async function blogPosts() {
     try {
         const posts = await getPosts(currentPage, postsPerPage);
@@ -27,8 +29,6 @@ blogPosts();
 
 
 // Load More Blog Posts
-loadPostsButton.addEventListener("click", showMorePosts);
-
 async function showMorePosts() {
     try { 
         if (currentPage < totalPages) {

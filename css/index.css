@@ -1,6 +1,6 @@
 /* Home Page */
 .intro {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/intro.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/intro.jpg);
     align-items: center;
     justify-content: center;
     min-height: 50vh;
@@ -23,6 +23,7 @@
 
 .featured h2 {
    align-self: flex-start;
+   margin-inline: 4px;
 }
 
 .featured, .benefits__wrapper {

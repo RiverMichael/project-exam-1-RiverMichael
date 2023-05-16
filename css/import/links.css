@@ -12,6 +12,10 @@ a:active {
     color: var(--clr-cta);
 }
 
+footer .active {
+    color: var(--clr-black);
+}
+
 nav li a {
     text-decoration: none;
     color: var(--clr-black);

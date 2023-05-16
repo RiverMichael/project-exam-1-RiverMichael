@@ -66,6 +66,10 @@
     .subscribe-container {
         padding: 50px 50px 100px;
     }
+
+    .about h1 {
+        text-align: left;
+    }
 }
 
 @media (min-width: 900px) {
@@ -79,7 +83,8 @@
 
     .featured {
         grid-template-columns: 1fr auto 1fr;
-        gap: 30px;
+        grid-row-gap: 30px;
+        grid-column-gap: 10px;
         margin-block: 100px;
     }
 
@@ -106,6 +111,7 @@
     
     .featured h2 {
         grid-area: 1/2;
+        margin-inline: 10px;
     }
 
     .featured-post:hover {
@@ -123,7 +129,6 @@
 
     .carousel-button {
         width: 50px;
-        margin-inline: 10px;
         display: block;
     }
 
@@ -135,9 +140,6 @@
 
     .carousel-button:hover {
         transform: scale(1.5);
-    }
-
-    .carousel-button img:hover {
         cursor: pointer;
     }
 
@@ -229,7 +231,7 @@
         padding-top: 30px;
     }
 
-    .blogpost__wrapper {
+    .blogpost__wrapper, .about {
         padding-block: 100px 200px;
     }
 
