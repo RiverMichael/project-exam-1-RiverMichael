@@ -80,15 +80,42 @@
     </header>
 
     <main class="blog container flex">
-      <h1>Blog Posts</h1>
+      <section class="search-sort flex">
+        <h2>Search / Sort blog posts</h2>
+        <div class="search-sort__wrapper flex">
+          <form class="search" role="search" id="search-form">
+            <input
+              type="search"
+              class="search-field"
+              id="search"
+              name="search"
+              placeholder="Search posts by name"
+              aria-label="search"
+            />
+          </form>
 
-      <section class="cardcontainer flex">
-        <div class="loader"></div>
+          <div class="sort-select">
+            <label for=""></label>
+            <select name="sort" id="sort">
+              <option selected disabled value="">Sort blog posts</option>
+              <option value="newest">Sort by newest post first</option>
+              <option value="oldest">Sort by oldest post first</option>
+              <option value="name-az">Sort by name A - Z</option>
+              <option value="name-za">Sort by name Z - A</option>
+            </select>
+          </div>
+        </div>
       </section>
 
-      <div class="blog-action">
-        <button class="cta cta-dark">load more posts</button>
-      </div>
+      <section class="cardcontainer flex">
+        <h1>Blog Posts</h1>
+        <div class="cardcontainer__wrapper flex">
+          <div class="loader"></div>
+        </div>
+        <div class="blog-action">
+          <button class="cta cta-dark">load more posts</button>
+        </div>
+      </section>
     </main>
 
     <footer>

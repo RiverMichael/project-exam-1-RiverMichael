@@ -58,8 +58,13 @@ input:hover, textarea:hover {
 }
 
 input:focus-visible, textarea:focus-visible {
+    box-shadow: 0px 0px 5px var(--clr-heading);
     outline: none;
     background: #f4f4f4;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    opacity: 0;
 }
 
 .container {

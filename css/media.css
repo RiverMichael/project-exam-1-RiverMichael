@@ -75,6 +75,14 @@
         align-items: center;
         gap: 50px;
     }
+
+    .search-sort {
+        align-items: flex-end;
+    }
+
+    .search-sort h2 {
+        font-size: var(--fs-400);
+    }
 }
 
 @media (min-width: 900px) {
@@ -182,7 +190,7 @@
         padding-block: 100px 200px;
     }
 
-    .cardcontainer {
+    .cardcontainer__wrapper {
         gap: 100px;
     }
 

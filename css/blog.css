@@ -1,9 +1,13 @@
 .blog {
     padding-block: 50px 100px;
-    gap: 30px;
+    gap: 50px;
 }
 
-.cardcontainer, .more-posts {
+.cardcontainer {
+    gap: 20px;
+}
+
+.cardcontainer__wrapper, .more-posts {
     gap: 50px;
 }
 
@@ -40,4 +44,55 @@
 
 .blog-action button {
     display: none;
+}
+
+.search-sort {
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.search-sort h2 {
+    font-size: var(--fs-300);
+}
+
+.search-sort__wrapper {
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#search {
+    min-width: 210px;
+}
+
+#search::placeholder {
+    opacity: 1;
+}
+
+#search:focus::placeholder {
+    opacity: 0;
+}
+
+#search, .sort-select select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    padding: 8px;
+    border-radius: 50px;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-200);
+    border: 1px solid transparent;
+    color: var(--clr-black);
+    background: var(--clr-white);
+    box-shadow: 0px 1px 4px var(--clr-black);
+    transition-duration: 0.25s;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+
+#search:hover, #search:focus-visible, .sort-select select:hover {
+    border: 1px solid var(--clr-cta);
 }
