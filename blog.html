@@ -29,6 +29,24 @@
 
     <script defer type="module" src="js/blog.js"></script>
     <script defer src="js/components/navigation.js"></script>
+
+    <!-- Hotjar Tracking Code for The Flavor Files -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3504541, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <!--  -->
   </head>
 
   <body>
@@ -64,12 +82,8 @@
     <main class="blog container flex">
       <h1>Blog Posts</h1>
 
-      <section class="cardcontainer__wrapper flex">
-        <div class="cardcontainer flex">
-          <div class="loader"></div>
-        </div>
-
-        <div class="message"></div>
+      <section class="cardcontainer flex">
+        <div class="loader"></div>
       </section>
 
       <div class="blog-action">

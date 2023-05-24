@@ -22,7 +22,7 @@ async function blogPosts() {
     catch (error) {
         console.log(error);
         clearHtml(blogPostsContainer);
-        createMessage(messageContainer, "error", "There was an error while loading the posts, please try again");
+        createMessage(blogPostsContainer, "error", "There was an error while loading the posts, please try again");
     }
 };
 blogPosts();

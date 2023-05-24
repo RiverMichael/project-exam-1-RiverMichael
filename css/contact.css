@@ -15,16 +15,16 @@
     gap: 10px;
 }
 
-.contact-form__info {
-    justify-content: space-between;
-}
-
 .contact-form__content {
     gap: 2px;
 }
 
 .contact-form__message {
     gap: 20px;
+}
+
+.contact-form textarea {
+    min-height: 210px;
 }
 
 .contact-form label {
@@ -45,6 +45,7 @@
     color: var(--clr-error);
     padding-block: 2px;
     font-family: var(--ff-heading);
+    font-size: var(--fs-200);
     display: none;
 }
 

@@ -19,9 +19,13 @@ export function createFeaturedPostHtml(post, parentElement) {
     featuredImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"]
     featuredPost.append(featuredImage)
 
+    const titleContainer = document.createElement("div");
+    titleContainer.classList.add("featured-title", "flex");
+    featuredPost.append(titleContainer);
+
     const featuredTitle = document.createElement("h3");
     featuredTitle.innerText = post.title.rendered;
-    featuredPost.append(featuredTitle)
+    titleContainer.append(featuredTitle)
 
     parentElement.append(featuredLink);
 };

@@ -25,6 +25,7 @@ body {
 
 img {
     display: block;
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -44,20 +45,16 @@ h3 {
     font-size: var(--fs-300);
 }
 
-img {
-    width: 100%;
-}
-
 input, textarea {
     font-size: var(--fs-200);
-    padding: 10px;
+    padding: 12px;
     border: 2px solid #7DA87B;
     border-radius: 10px;
-    transition: all 0.25s;
 }
 
 input:hover, textarea:hover {
     box-shadow: 0px 0px 5px var(--clr-heading);
+    transition: all 0.25s;
 }
 
 input:focus-visible, textarea:focus-visible {

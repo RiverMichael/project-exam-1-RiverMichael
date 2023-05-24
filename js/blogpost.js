@@ -6,7 +6,7 @@ import { openModal, closeModal } from "./components/modal.js";
 async function postDetails() {
     try {
         const post = await getPostDetails();
-        const postContainer = document.querySelector(".blogpost__wrapper");
+        const postContainer = document.querySelector(".blogpost-container");
         const modalContent = document.querySelector(".modal-content");
         const modalOverlay = document.querySelector(".modal-overlay");
         const closeModalButton = document.querySelector(".icon-close");

@@ -1,10 +1,6 @@
 .blog {
-    margin-block: 50px 100px;
+    padding-block: 50px 100px;
     gap: 30px;
-}
-
-.cardcontainer__wrapper {
-    gap: 50px;
 }
 
 .cardcontainer, .more-posts {

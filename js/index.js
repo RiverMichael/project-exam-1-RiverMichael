@@ -19,6 +19,8 @@ let slideWidth = 0;
 let currentPosition = 0;
 let maxScroll = 0;
 
+prevButton.disabled = "true";
+
 nextButton.addEventListener("click", slideRight);
 prevButton.addEventListener("click", slideLeft);
 
@@ -38,7 +40,6 @@ async function featuredPosts() {
         } else {
             slideWidth = featuredContainer.offsetWidth + 20;
         }
-
         maxScroll = featuredContainer.scrollWidth - featuredContainer.offsetWidth;
     }
     catch (error) {
@@ -65,19 +66,23 @@ function slideLeft() {
 // Toggle Carousel Buttons
 function toggleCarouselButtons() {
     if (currentPosition >= maxScroll) {
-        nextButton.style.opacity = 0.1;
+        nextButton.style.opacity = 0.2;
         nextButton.disabled = "true";
+        nextButton.style.cursor = "default";
     } else {
         nextButton.style.opacity = 1;
         nextButton.disabled = "";
+        nextButton.style.cursor = "pointer";
     }
 
     if (!currentPosition) {
-        prevButton.style.opacity = 0.1;
+        prevButton.style.opacity = 0.2;
         prevButton.disabled = "true";
+        prevButton.style.cursor = "default";
     } else {
         prevButton.style.opacity = 1;
         prevButton.disabled = "";
+        prevButton.style.cursor = "pointer";
     }
 };
 

@@ -83,7 +83,7 @@ footer ul a:active {
     border: none;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     min-width: 200px;
-    transition: all 0.25s;
+    cursor: pointer;
 }
 
 .cta-dark {
@@ -92,7 +92,7 @@ footer ul a:active {
 
 .cta:hover {
     background: var(--clr-heading);
-    cursor: pointer;
+    transition: background 0.25s;
 }
 
 .cta-dark:hover {
