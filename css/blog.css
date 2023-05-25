@@ -1,6 +1,8 @@
 .blog {
     padding-block: 50px 100px;
-    gap: 50px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
 }
 
 .cardcontainer {
@@ -49,6 +51,8 @@
 .search-sort {
     align-items: flex-start;
     gap: 20px;
+    grid-area: 1;
+    margin-bottom: 30px;
 }
 
 .search-sort h2 {
@@ -88,9 +92,12 @@
     box-shadow: 0px 1px 4px var(--clr-black);
     transition-duration: 0.25s;
     text-align: center;
-    cursor: pointer;
     outline: none;
     width: 100%;
+}
+
+.sort-select select {
+    cursor: pointer;
 }
 
 #search:hover, #search:focus-visible, .sort-select select:hover {

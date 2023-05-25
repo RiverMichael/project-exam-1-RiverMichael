@@ -47,7 +47,7 @@
 
   <body>
     <header>
-      <a href="/"
+      <a href="/" aria-label="go to our home page"
         ><img
           src="images/logo/color_logo-no_background.png"
           alt="logotype for the flavor files"
@@ -66,7 +66,7 @@
           <li><a href="contact.html" class="active">contact</a></li>
         </ul>
         <div class="navlogo">
-          <a href="/">
+          <a href="/" aria-label="go to our home page">
             <img
               src="images/logo/small_logo.svg"
               alt="logotype for the flavor files"
@@ -76,76 +76,72 @@
     </header>
 
     <main>
-      <section class="contact flex container">
+      <section class="contact flex">
+        <h1>Send us a message</h1>
         <form id="contact-form" class="contact-form flex">
-          <h1>Send us a message</h1>
-          <div class="contact-form__wrapper split">
-            <section class="contact-form__info flex">
-              <div class="contact-form__content flex">
-                <label for="name"
-                  >Name
-                  <span class="label-span">(min. 6 characters)</span></label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="John Flavor"
-                />
-                <div class="contact-form__error" id="name-error">
-                  Please enter min. 6 characters
-                </div>
+          <div class="contact-form__wrapper flex">
+            <div class="contact-form__content flex">
+              <label for="name"
+                >Name <span class="label-span">(min. 6 characters)</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Flavor"
+              />
+              <div class="contact-form__error" id="name-error">
+                Please enter min. 6 characters
               </div>
+            </div>
 
-              <div class="contact-form__content flex">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="john@flavor.com"
-                />
-                <div class="contact-form__error" id="email-error">
-                  Please enter a valid email adress
-                </div>
+            <div class="contact-form__content flex">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@flavor.com"
+              />
+              <div class="contact-form__error" id="email-error">
+                Please enter a valid email adress
               </div>
+            </div>
 
-              <div class="contact-form__content flex">
-                <label for="subject"
-                  >Subject
-                  <span class="label-span">(min. 16 characters)</span></label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Can you blog about pasta"
-                />
-                <div class="contact-form__error" id="subject-error">
-                  Please enter min. 16 characters
-                </div>
+            <div class="contact-form__content flex">
+              <label for="subject"
+                >Subject
+                <span class="label-span">(min. 16 characters)</span></label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Can you blog about pasta"
+              />
+              <div class="contact-form__error" id="subject-error">
+                Please enter min. 16 characters
               </div>
-            </section>
+            </div>
 
-            <section class="contact-form__message flex">
-              <div class="contact-form__content flex">
-                <label for="message"
-                  >Message
-                  <span class="label-span">(min. 26 characters)</span></label
-                >
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  placeholder="Can you please blog more about Italian food and pasta?"
-                ></textarea>
-                <div class="contact-form__error" id="message-error">
-                  Please enter min. 26 characters
-                </div>
+            <div class="contact-form__content flex">
+              <label for="message"
+                >Message
+                <span class="label-span">(min. 26 characters)</span></label
+              >
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Can you please blog more about Italian food and pasta?"
+              ></textarea>
+              <div class="contact-form__error" id="message-error">
+                Please enter min. 26 characters
               </div>
-            </section>
+            </div>
           </div>
+
           <div class="contact-form__action">
             <button class="cta">send</button>
           </div>
@@ -204,7 +200,7 @@
       </div>
 
       <div class="logo-bottom">
-        <a href="/">
+        <a href="/" aria-label="go to our home page">
           <img
             src="images/logo/small_logo-white.svg"
             alt="logotype for the flavor files"

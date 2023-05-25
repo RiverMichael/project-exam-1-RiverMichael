@@ -14,7 +14,8 @@
 }
 
 .featured {
-    padding-block: 50px 100px;
+    padding-block: 50px;
+    gap: 30px;
 }
 
 .featured__wrapper {
@@ -99,10 +100,14 @@
     justify-content: center;
 }
 
+.featured__action {
+    text-align: center;
+}
+
 .benefits {
     justify-content: center;
     flex-direction: column-reverse;
-    padding-block: 100px 200px;
+    padding-block: 50px 100px;
     gap: 30px;
 }
 
@@ -149,6 +154,7 @@
 }
 
 #signup-form {
+    align-items: center;
     gap: 30px;
 }
 

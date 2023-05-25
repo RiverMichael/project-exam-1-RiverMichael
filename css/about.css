@@ -2,12 +2,14 @@
     gap: 30px;
     padding-block: 50px 100px;
     justify-content: center;
+    align-items: center;
     width: min(100% - 100px, 800px);
     margin-inline: auto;
 }
 
 .about h1 {
     text-align: center;
+    max-width: 185px;
 }
 
 .about-content {

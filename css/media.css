@@ -69,11 +69,7 @@
 
     .about h1 {
         text-align: left;
-    }
-
-    .contact-form {
-        align-items: center;
-        gap: 50px;
+        max-width: 100%;
     }
 
     .search-sort {
@@ -150,6 +146,10 @@
         min-height: 260px;
     }
 
+    .featured__action {
+        display: none;
+    }
+
     /* Footer */
     footer {
         grid-template-columns: 1fr auto 1fr;
@@ -223,7 +223,7 @@
 
     .card-image {
         border-radius: 20px 0px 0px 20px;
-        height: 400px;
+        height: 300px;
     }
 
     .breadcrumb {
@@ -270,20 +270,10 @@
 
     .contact {
         padding-block: 100px 200px;
-        
-        align-items: center;
-    }
-
-    .contact-form h1 {
-        align-self: flex-start;
     }
 
     .contact-form input, .contact-form textarea {
         min-width: 300px;
-    }
-
-    .contact-form__action {
-        align-self: flex-end;
     }
 }
 
