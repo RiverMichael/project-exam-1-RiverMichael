@@ -24,5 +24,5 @@ function validateForm(event) {
     if (validateLength(name, name.value, 5, nameError) && validateEmail(email, email.value, emailError) && validateLength(subject, subject.value, 15, subjectError) && validateLength(message, message.value, 25, messageError)) {
         form.reset();
         openModal(contactValidation, modalOverlay);
-    }
+    };
 };

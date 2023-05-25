@@ -6,7 +6,7 @@ import { openModal, closeModal } from "./components/modal.js";
 async function postDetails() {
     try {
         const post = await getPostDetails();
-        const postContainer = document.querySelector(".blogpost-container");
+        const postContainer = document.querySelector(".blogpost");
         const modalContent = document.querySelector(".modal-content");
         const modalOverlay = document.querySelector(".modal-overlay");
         const closeModalButton = document.querySelector(".icon-close");
@@ -17,7 +17,7 @@ async function postDetails() {
         renderPostDetails(post, postContainer);
         createImageModalHtml(post, modalContent);
 
-        const image = document.querySelector(".post-image");
+        const image = document.querySelector(".blogpost-image");
 
         image.addEventListener("click", () => openModal(modalContent, modalOverlay));
         modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverlay));

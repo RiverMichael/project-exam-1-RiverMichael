@@ -2,10 +2,9 @@
     padding-block: 50px 100px;
     display: grid;
     grid-auto-flow: row;
-    gap: 20px;
 }
 
-.cardcontainer {
+.blog, .cardcontainer, .card, .search-sort {
     gap: 20px;
 }
 
@@ -14,21 +13,26 @@
 }
 
 .card {
-    align-items: center;
     padding: 0px 0px 20px;
-    gap: 20px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     transition: box-shadow 0.25s;
 }
 
+.card, .search-sort__wrapper {
+    align-items: center;
+}
+
 .card-content {
     padding: 20px;
+}
+
+.card-content, .search-sort__wrapper {
     gap: 10px;
 }
 
-.card-button {
+.card-button, .blog-action button {
     display: none;
 }
 
@@ -44,13 +48,8 @@
     align-self: center;
 }
 
-.blog-action button {
-    display: none;
-}
-
 .search-sort {
     align-items: flex-start;
-    gap: 20px;
     grid-area: 1;
     margin-bottom: 30px;
 }
@@ -60,8 +59,6 @@
 }
 
 .search-sort__wrapper {
-    gap: 10px;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
 }

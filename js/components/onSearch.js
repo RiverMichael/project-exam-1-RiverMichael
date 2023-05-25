@@ -12,7 +12,7 @@ export function onSearch(value, parentElement, postsList) {
         clearHtml(parentElement);
         createMessage(parentElement, "error", "No posts found by the search");
     };
-}
+};
 
 function filterPostsOnSearch(posts, term) {
     return posts.filter(function(post) {

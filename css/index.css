@@ -1,11 +1,17 @@
 /* Home Page */
 .intro {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/intro.jpg);
-    align-items: center;
     justify-content: center;
     min-height: 50vh;
     background-size: cover;
     background-position: center;
+}
+
+.intro, .featured__wrapper, .featured-post, .benefits {
+    align-items: center;
+}
+
+.intro, .carousel, .benefits__content h2, .benefits__action {
     text-align: center;
 }
 
@@ -15,6 +21,9 @@
 
 .featured {
     padding-block: 50px;
+}
+
+.featured, .benefits, .subscribe-content, #signup-form {
     gap: 30px;
 }
 
@@ -31,11 +40,7 @@
    margin-inline: 4px;
 }
 
-.featured__wrapper, .featured-post, .benefits {
-    align-items: center;
-}
-
-.featured__wrapper h2, .benefits__wrapper h2 {
+.featured__wrapper h2, .benefits__content h2 {
     color: var(--clr-heading);
 }
 
@@ -62,10 +67,6 @@
     width: 100%;
     justify-content: space-between;
     max-height: 1210px;
-}
-
-.carousel, .benefits__wrapper h2, .benefits__action {
-    text-align: center;
 }
 
 .carousel-inner {
@@ -108,20 +109,22 @@
     justify-content: center;
     flex-direction: column-reverse;
     padding-block: 50px 100px;
-    gap: 30px;
 }
 
-.benefits__wrapper {
+.benefits__content {
     gap: 20px;
 }
 
-.benefits__wrapper h2 {
+.benefits__content h2 {
     text-align: left;
 }
 
-.benefits__wrapper ul {
-    gap: 5px;
+.benefits__content ul {
     list-style-position: inside;
+}
+
+.benefits__content ul, .signup-form__wrapper {
+    gap: 5px;
 }
 
 .benefits-image {
@@ -146,7 +149,6 @@
 
 .subscribe-content {
     align-items: center;
-    gap: 30px;
 }
 
 .subscribe-content h2 {
@@ -155,11 +157,6 @@
 
 #signup-form {
     align-items: center;
-    gap: 30px;
-}
-
-.signup-form__wrapper {
-    gap: 5px;
 }
 
 .subscribe-error {

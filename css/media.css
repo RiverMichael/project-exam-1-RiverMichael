@@ -186,10 +186,6 @@
         align-items: center;
     }
 
-    .blog {
-        padding-block: 100px 200px;
-    }
-
     .cardcontainer__wrapper {
         gap: 100px;
     }
@@ -209,7 +205,7 @@
     }
 
     .card-content {
-        gap: 30px;  
+        gap: 20px;  
     }
 
     .card-action {
@@ -230,17 +226,25 @@
         padding-top: 30px;
     }
 
-    .blogpost-container, .about {
+    .blog, .blogpost, .about, .contact {
         padding-block: 100px 200px;
     }
 
-    .blogpost {
+    .blogpost__wrapper {
         grid-template-columns: 1fr auto;
-        gap: 100px;
+        gap: 50px;
     }
 
-    .blogpost h1 {
-        grid-column: 1/3;
+    .blogpost-content {
+        display: flex;
+        flex-direction: column;
+        grid-area: 2;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .blogpost-content h1 {
+        text-align: left;
     }
 
     .description {
@@ -248,14 +252,18 @@
         grid-area: 2/2;
     }
 
-    .post-image {
+    .blogpost__image-container {
         grid-area: 2/1;
-        width: 380px;
-        height: 380px;
+        align-self: center;
         transition: all 0.25s;
     }
 
-    .post-image:hover {
+    .blogpost-image {
+        width: 380px;
+        height: 380px;
+    }
+
+    .blogpost-image:hover {
         cursor: zoom-in;
         filter: drop-shadow(0px 4px 10px var(--clr-black));
     }
@@ -266,10 +274,6 @@
 
     .instructions {
         grid-area: 3/2;
-    }
-
-    .contact {
-        padding-block: 100px 200px;
     }
 
     .contact-form input, .contact-form textarea {

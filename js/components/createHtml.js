@@ -11,13 +11,13 @@ export function createFeaturedPostHtml(post, parentElement) {
     
     const featuredPost = document.createElement("div");
     featuredPost.classList.add("featured-post", "flex");
-    featuredLink.append(featuredPost)
+    featuredLink.append(featuredPost);
 
     const featuredImage = document.createElement("img");
     featuredImage.classList.add("featured-image");
     featuredImage.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
-    featuredImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"]
-    featuredPost.append(featuredImage)
+    featuredImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
+    featuredPost.append(featuredImage);
 
     const titleContainer = document.createElement("div");
     titleContainer.classList.add("featured-title", "flex");
@@ -25,7 +25,7 @@ export function createFeaturedPostHtml(post, parentElement) {
 
     const featuredTitle = document.createElement("h3");
     featuredTitle.innerText = post.title.rendered;
-    titleContainer.append(featuredTitle)
+    titleContainer.append(featuredTitle);
 
     parentElement.append(featuredLink);
 };
@@ -36,7 +36,7 @@ export function createPostHtml(post, parentElement) {
     cardLink.classList.add("card-link");
     cardLink.href = `blogpost.html?id=${post.id}`;
 
-    const blogPostCard = document.createElement("div");
+    const blogPostCard = document.createElement("section");
     blogPostCard.classList.add("card", "split");
     blogPostCard.id = post.id;
     cardLink.append(blogPostCard);
@@ -68,30 +68,38 @@ export function createPostHtml(post, parentElement) {
     cardButton.innerText = "view more";
     cardAction.append(cardButton);
 
-    parentElement.append(cardLink)
+    parentElement.append(cardLink);
 };
 
 // BlogPost Details Page
 export function createPostDetailsHtml (post, parentElement) {
     const blogpost = document.createElement("div");
-    blogpost.classList.add("blogpost");
+    blogpost.classList.add("blogpost__wrapper");
+
+    const descriptionContainer = document.createElement("section");
+    descriptionContainer.classList.add("blogpost-content");
+    blogpost.append(descriptionContainer);
 
     const postTitle = document.createElement("h1");
     postTitle.innerText = post.title.rendered;
-    blogpost.append(postTitle);
+    descriptionContainer.append(postTitle);
 
     const postDescription = document.createElement("p");
-    postDescription.classList.add("description")
+    postDescription.classList.add("description");
     postDescription.innerText = post.content.rendered.match(/<p>(?:(?!<\/p>).)*<\/p>\s*(<p>(?:(?!<\/p>).)*<\/p>)?/g)[0].replace("<p>", "").replace("</p>", "").trim();
-    blogpost.append(postDescription);
+    descriptionContainer.append(postDescription);
+
+    const imageContainer = document.createElement("section");
+    imageContainer.classList.add("blogpost__image-container");
+    blogpost.append(imageContainer);
 
     const postImage = document.createElement("img");
-    postImage.classList.add("post-image");
+    postImage.classList.add("blogpost-image");
     postImage.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
     postImage.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
-    blogpost.append(postImage);
+    imageContainer.append(postImage);
 
-    const ingredientsContainer = document.createElement("div");
+    const ingredientsContainer = document.createElement("section");
     ingredientsContainer.classList.add("ingredients", "flex");
     blogpost.append(ingredientsContainer);
 
@@ -110,11 +118,11 @@ export function createPostDetailsHtml (post, parentElement) {
         ingredient.innerText = listItem;
         ingredientsList.append(ingredient)
     });
-    ingredientsContainer.append(ingredientsList)
+    ingredientsContainer.append(ingredientsList);
 
-    const instructionsContainer = document.createElement("div");
+    const instructionsContainer = document.createElement("section");
     instructionsContainer.classList.add("instructions", "flex");
-    blogpost.append(instructionsContainer)
+    blogpost.append(instructionsContainer);
     
     const instructionsHeading = document.createElement("h2");
     instructionsHeading.innerText = "Instructions";
@@ -129,7 +137,7 @@ export function createPostDetailsHtml (post, parentElement) {
         const listItem = item.replace("<li>", "").replace("</li>", "");
         const instruction = document.createElement("li");
         instruction.innerText = listItem;
-        instructionsList.append(instruction)
+        instructionsList.append(instruction);
     });
     instructionsContainer.append(instructionsList);
 
@@ -143,7 +151,7 @@ export function createPostDetailsHtml (post, parentElement) {
 // Image Modal
 export function createImageModalHtml(post, parentElement) {
     const imageModal = document.createElement("img");
-    imageModal.classList.add("modal-image")
+    imageModal.classList.add("modal-image");
     imageModal.src = post["_embedded"]["wp:featuredmedia"][0]["source_url"];
     imageModal.alt = post["_embedded"]["wp:featuredmedia"][0]["alt_text"];
 
@@ -169,4 +177,3 @@ export function createSubscribeValidationHtml(parentElement) {
 
     parentElement.append(validationContainer);
 };
-

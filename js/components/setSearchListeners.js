@@ -9,5 +9,5 @@ export function setSearchListeners(parentElement, searchList) {
 
     searchForm.addEventListener("input", function(event) {
         onSearch(event.target.value, parentElement, searchList);
-    })
+    });
 };

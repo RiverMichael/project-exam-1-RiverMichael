@@ -9,7 +9,7 @@ export function validateEmail(input, value, errorMessage) {
         errorMessage.style.display = "block";
         input.style.border = "2px solid var(--clr-error)";
     }
-    return result
+    return result;
 };
 
 export function validateLength(input, value, length, errorMessage) {

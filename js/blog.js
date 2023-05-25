@@ -46,10 +46,10 @@ async function showMorePosts() {
             });
 
             renderPosts(posts, blogPostsContainer);
-        }
+        };
         if (currentPage === totalPages) {
             loadPostsButton.style.display = "none";
-        }
+        };
     }
     catch (error) {
         console.log(error);
