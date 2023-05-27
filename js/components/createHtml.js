@@ -77,7 +77,7 @@ export function createPostDetailsHtml (post, parentElement) {
     blogpost.classList.add("blogpost__wrapper");
 
     const descriptionContainer = document.createElement("section");
-    descriptionContainer.classList.add("blogpost-content");
+    descriptionContainer.classList.add("blogpost__content");
     blogpost.append(descriptionContainer);
 
     const postTitle = document.createElement("h1");

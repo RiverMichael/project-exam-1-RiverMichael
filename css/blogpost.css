@@ -37,11 +37,11 @@
     gap: 30px;
 }
 
-.blogpost-content {
+.blogpost__content {
     display: contents;
 }
 
-.blogpost-content h1 {
+.blogpost__content h1 {
     text-align: center;
 }
 

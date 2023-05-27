@@ -235,7 +235,7 @@
         gap: 50px;
     }
 
-    .blogpost-content {
+    .blogpost__content {
         display: flex;
         flex-direction: column;
         grid-area: 2;
@@ -243,7 +243,7 @@
         justify-content: center;
     }
 
-    .blogpost-content h1 {
+    .blogpost__content h1 {
         text-align: left;
     }
 
@@ -259,8 +259,8 @@
     }
 
     .blogpost-image {
-        width: 380px;
-        height: 380px;
+        width: 350px;
+        height: 350px;
     }
 
     .blogpost-image:hover {
