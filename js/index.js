@@ -27,7 +27,7 @@ prevButton.addEventListener("click", slideLeft);
 subscribeButton.addEventListener("click", () => openModal(subscribeContainer, modalOverlay));
 modalOverlay.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
 subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
-form.addEventListener("click", subscribeValidation);
+form.addEventListener("submit", subscribeValidation);
 
 async function featuredPosts() {
     try {

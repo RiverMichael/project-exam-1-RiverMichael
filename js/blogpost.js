@@ -3,13 +3,17 @@ import { clearHtml, createImageModalHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 import { openModal, closeModal } from "./components/modal.js";
 
+const postContainer = document.querySelector(".blogpost");
+const modalContent = document.querySelector(".modal-content");
+const modalOverlay = document.querySelector(".modal-overlay");
+const closeModalButton = document.querySelector(".icon-close");
+
+modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverlay));
+closeModalButton.addEventListener("click", () => closeModal(modalContent, modalOverlay));
+
 async function postDetails() {
     try {
         const post = await getPostDetails();
-        const postContainer = document.querySelector(".blogpost");
-        const modalContent = document.querySelector(".modal-content");
-        const modalOverlay = document.querySelector(".modal-overlay");
-        const closeModalButton = document.querySelector(".icon-close");
         
         document.title = `The Flavor Files | ${post.title.rendered}`;
 
@@ -18,10 +22,7 @@ async function postDetails() {
         createImageModalHtml(post, modalContent);
 
         const image = document.querySelector(".blogpost-image");
-
         image.addEventListener("click", () => openModal(modalContent, modalOverlay));
-        modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverlay));
-        closeModalButton.addEventListener("click", () => closeModal(modalContent, modalOverlay));
     }
     catch (error) {
         console.log(error);

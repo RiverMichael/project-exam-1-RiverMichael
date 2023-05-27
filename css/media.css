@@ -183,7 +183,7 @@
     }
 
     #signup-form {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .cardcontainer__wrapper {

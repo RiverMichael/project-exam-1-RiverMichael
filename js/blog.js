@@ -60,7 +60,7 @@ async function showMorePosts() {
 
 
 // // Sort Blog Posts
-async function sortPosts(event) {
+function sortPosts(event) {
     const selected = event.target.value;
     
     if (selected === "newest") {
