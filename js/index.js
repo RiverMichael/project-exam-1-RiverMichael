@@ -33,7 +33,7 @@ async function featuredPosts() {
     try {
         const posts = await getFeaturedPosts();
         clearHtml(featuredContainer);
-        renderFeaturedPosts(posts, featuredContainer); 
+        renderFeaturedPosts(posts, featuredContainer);
 
         if (window.innerWidth >= 1200) {
             slideWidth = featuredContainer.offsetWidth + 10;

@@ -112,6 +112,7 @@
     .carousel {
         grid-area: 2;
         justify-content: center;
+        align-items: center;
     }
 
     .carousel-inner {
