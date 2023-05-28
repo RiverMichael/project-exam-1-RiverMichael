@@ -22,6 +22,6 @@ The website consists of 5 pages:
 
 ## Author
 
-[Michael Nilsson](mrn@michaelriver.dev) - FrontEnd Development student at Noroff, class of Aug22FT.
+[Michael Nilsson](mailto:mrn@michaelriver.dev) - FrontEnd Development student at Noroff, class of Aug22FT.
 
 [Michael River Nilsson](https://www.michaelriver.dev)
