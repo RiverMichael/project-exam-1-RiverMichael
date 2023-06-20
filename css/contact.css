@@ -1,67 +1,71 @@
 .contact {
-    padding-block: 50px 100px;
-    justify-content: center;
-    width: min(100% - 100px, 600px);
-    margin-inline: auto;
+  padding-block: 50px 100px;
+  justify-content: center;
+  width: min(100% - 100px, 600px);
+  margin-inline: auto;
 }
 
-.contact, .contact-form, .validation {
-    gap: 30px;
+.contact,
+.contact-form,
+.validation {
+  gap: 30px;
 }
 
 .contact h1 {
-    text-align: center;
+  text-align: center;
 }
 
-.contact-form__wrapper, .contact-form__info {
-    gap: 10px;
+.contact-form__wrapper,
+.contact-form__info {
+  gap: 10px;
 }
 
-.contact-form__content, .contact-form_message {
-    gap: 2px;
+.contact-form__content,
+.contact-form_message {
+  gap: 2px;
 }
 
 .contact-form label {
-    font-family: var(--ff-heading);
-    font-weight: var(--fw-bold);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
 }
 
 .label-span {
-    font-size: var(--fs-100);
-    font-weight: var(--fw-regular);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-regular);
 }
 
 .contact-form__action {
-    align-self: center
+  align-self: center;
 }
 
 .contact-form__error {
-    color: var(--clr-error);
-    padding-block: 2px;
-    font-family: var(--ff-heading);
-    font-size: var(--fs-200);
-    display: none;
+  color: var(--clr-error);
+  padding-block: 2px;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-200);
+  display: none;
 }
 
 .contact-validation {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    background-color: white;
-    padding: 30px 30px 50px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    border-radius: 20px;
-    width: min(100% - 50px, 1200px);
-    margin-inline: auto;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: white;
+  padding: 30px 30px 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: min(100% - 50px, 1200px);
+  margin-inline: auto;
 }
 
 .validation {
-    align-items: center;
+  align-items: center;
 }
 
 .validation h2 {
-    text-align: center;
+  text-align: center;
 }

@@ -30,67 +30,66 @@ subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, mo
 form.addEventListener("submit", subscribeValidation);
 
 async function featuredPosts() {
-    try {
-        const posts = await getFeaturedPosts();
-        clearHtml(featuredContainer);
-        renderFeaturedPosts(posts, featuredContainer);
+  try {
+    const posts = await getFeaturedPosts();
+    clearHtml(featuredContainer);
+    renderFeaturedPosts(posts, featuredContainer);
 
-        if (window.innerWidth >= 1200) {
-            slideWidth = featuredContainer.offsetWidth + 10;
-        } else {
-            slideWidth = featuredContainer.offsetWidth + 20;
-        }
-        maxScroll = featuredContainer.scrollWidth - featuredContainer.offsetWidth;
+    if (window.innerWidth >= 1200) {
+      slideWidth = featuredContainer.offsetWidth + 10;
+    } else {
+      slideWidth = featuredContainer.offsetWidth + 20;
     }
-    catch (error) {
-        console.log(error);
-        clearHtml(featuredContainer);
-        createMessage(featuredContainer, "error", "There was an error while loading the posts, please try again");
-    }
-};
+    maxScroll = featuredContainer.scrollWidth - featuredContainer.offsetWidth;
+  } catch (error) {
+    console.log(error);
+    clearHtml(featuredContainer);
+    createMessage(featuredContainer, "error", "There was an error while loading the posts, please try again");
+  }
+}
 featuredPosts();
 
 // Show Next/Previous Posts
 function slideRight() {
-    currentPosition += slideWidth;
-    featuredContainer.scrollLeft += slideWidth;
-    toggleCarouselButtons();
-};
+  currentPosition += slideWidth;
+  featuredContainer.scrollLeft += slideWidth;
+  toggleCarouselButtons();
+}
 
 function slideLeft() {
-    currentPosition -= slideWidth;
-    featuredContainer.scrollLeft -= slideWidth;
-    toggleCarouselButtons();
-};
+  currentPosition -= slideWidth;
+  featuredContainer.scrollLeft -= slideWidth;
+  toggleCarouselButtons();
+}
 
 // Toggle Carousel Buttons
 function toggleCarouselButtons() {
-    if (currentPosition >= maxScroll) {
-        nextButton.style.opacity = 0.2;
-        nextButton.disabled = "true";
-        nextButton.style.cursor = "default";
-    } else {
-        nextButton.style.opacity = 1;
-        nextButton.disabled = "";
-        nextButton.style.cursor = "pointer";
-    }
+  if (currentPosition >= maxScroll) {
+    nextButton.style.opacity = 0.2;
+    nextButton.disabled = "true";
+    nextButton.style.cursor = "default";
+  } else {
+    nextButton.style.opacity = 1;
+    nextButton.disabled = "";
+    nextButton.style.cursor = "pointer";
+  }
 
-    if (!currentPosition) {
-        prevButton.style.opacity = 0.2;
-        prevButton.disabled = "true";
-        prevButton.style.cursor = "default";
-    } else {
-        prevButton.style.opacity = 1;
-        prevButton.disabled = "";
-        prevButton.style.cursor = "pointer";
-    }
-};
+  if (!currentPosition) {
+    prevButton.style.opacity = 0.2;
+    prevButton.disabled = "true";
+    prevButton.style.cursor = "default";
+  } else {
+    prevButton.style.opacity = 1;
+    prevButton.disabled = "";
+    prevButton.style.cursor = "pointer";
+  }
+}
 
 // Subscribe Validation
 function subscribeValidation(event) {
-    event.preventDefault();
-    if (validateEmail(email, email.value, emailError)) {
-        clearHtml(subscribeContainer);
-        createSubscribeValidationHtml(subscribeContainer);
-    };
-};
+  event.preventDefault();
+  if (validateEmail(email, email.value, emailError)) {
+    clearHtml(subscribeContainer);
+    createSubscribeValidationHtml(subscribeContainer);
+  }
+}

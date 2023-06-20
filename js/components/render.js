@@ -14,36 +14,36 @@ const postDetailsURL = api + postBase + `/${id}` + embed;
 export let totalPages;
 
 export async function getApi(url) {
-    const response = await fetch (url);
-    const results = await response.json();
-    totalPages = parseInt(response.headers.get('X-WP-TotalPages'));
-    return results;
-};
+  const response = await fetch(url);
+  const results = await response.json();
+  totalPages = parseInt(response.headers.get("X-WP-TotalPages"));
+  return results;
+}
 
 export async function getFeaturedPosts() {
-    return await getApi(postsURL);
-};
+  return await getApi(postsURL);
+}
 
 export async function getPosts(currentPage, postsPerPage) {
-    return await getApi(postsURL + `&page=${currentPage}&per_page=${postsPerPage}`);
-};
+  return await getApi(postsURL + `&page=${currentPage}&per_page=${postsPerPage}`);
+}
 
 export async function getPostDetails() {
-    return await getApi(postDetailsURL);
-};
+  return await getApi(postDetailsURL);
+}
 
 export function renderFeaturedPosts(posts, parentElement) {
-    posts.forEach(post => {
-        createFeaturedPostHtml(post, parentElement);
-    });
-};
+  posts.forEach((post) => {
+    createFeaturedPostHtml(post, parentElement);
+  });
+}
 
 export function renderPosts(posts, parentElement) {
-    posts.forEach(post => {
-        createPostHtml(post, parentElement);
-    })
-};
+  posts.forEach((post) => {
+    createPostHtml(post, parentElement);
+  });
+}
 
 export function renderPostDetails(post, parentElement) {
-    return createPostDetailsHtml(post, parentElement);
-};
+  return createPostDetailsHtml(post, parentElement);
+}

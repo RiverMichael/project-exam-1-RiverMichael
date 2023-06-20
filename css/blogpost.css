@@ -1,83 +1,89 @@
 .breadcrumb {
-    flex-direction: row;
-    padding-inline: 20px;
-    width: fit-content;
+  flex-direction: row;
+  padding-inline: 20px;
+  width: fit-content;
 }
 
-.breadcrumb, .content {
-    gap: 20px;
+.breadcrumb,
+.content {
+  gap: 20px;
 }
 
-.breadcrumb, .blogpost {
-    align-items: center;
+.breadcrumb,
+.blogpost {
+  align-items: center;
 }
 
 .breadcrumb a {
-    color: var(--clr-cta);
-    font-family: var(--ff-heading);
-    font-weight: var(--fw-bold);
-    transition: all 0.25s;
+  color: var(--clr-cta);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  transition: all 0.25s;
 }
 
 .breadcrumb:hover a {
-    color: var(--clr-black);
+  color: var(--clr-black);
 }
 
 .breadcrumb img {
-    width: 40px;
+  width: 40px;
 }
 
 .blogpost {
-    padding-block: 50px 100px;
+  padding-block: 50px 100px;
 }
 
 .blogpost__wrapper {
-    display: grid;
-    grid-auto-columns: 1fr;
-    gap: 30px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 30px;
 }
 
 .blogpost__content {
-    display: contents;
+  display: contents;
 }
 
 .blogpost__content h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .blogpost__image-container {
-    grid-area: 2;
-    justify-self: center;
+  grid-area: 2;
+  justify-self: center;
 }
 
 .blogpost-image {
-    border-radius: 50%;
-    width: 240px;
-    height: 240px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    object-fit: cover;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  object-fit: cover;
 }
 
-.ingredients, .instructions, .blogpost ul, .blogpost ol {
-    gap: 10px;
+.ingredients,
+.instructions,
+.blogpost ul,
+.blogpost ol {
+  gap: 10px;
 }
 
-.blogpost ul, .blogpost ol {
-    list-style-position: inside;
+.blogpost ul,
+.blogpost ol {
+  list-style-position: inside;
 }
 
 .modal-content {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    width: min(100% - 50px, 600px);
-    margin-inline: auto;
-    text-align: right;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: min(100% - 50px, 600px);
+  margin-inline: auto;
+  text-align: right;
 }
 
 .icon-close {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

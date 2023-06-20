@@ -12,22 +12,21 @@ modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverl
 closeModalButton.addEventListener("click", () => closeModal(modalContent, modalOverlay));
 
 async function postDetails() {
-    try {
-        const post = await getPostDetails();
-        
-        document.title = `The Flavor Files | ${post.title.rendered}`;
+  try {
+    const post = await getPostDetails();
 
-        clearHtml(postContainer);
-        renderPostDetails(post, postContainer);
-        createImageModalHtml(post, modalContent);
+    document.title = `The Flavor Files | ${post.title.rendered}`;
 
-        const image = document.querySelector(".blogpost-image");
-        image.addEventListener("click", () => openModal(modalContent, modalOverlay));
-    }
-    catch (error) {
-        console.log(error);
-        clearHtml(postContainer);
-        createMessage(postContainer, "error", "There was an error while loading this blogpost, please try again");
-    };
-};
+    clearHtml(postContainer);
+    renderPostDetails(post, postContainer);
+    createImageModalHtml(post, modalContent);
+
+    const image = document.querySelector(".blogpost-image");
+    image.addEventListener("click", () => openModal(modalContent, modalOverlay));
+  } catch (error) {
+    console.log(error);
+    clearHtml(postContainer);
+    createMessage(postContainer, "error", "There was an error while loading this blogpost, please try again");
+  }
+}
 postDetails();

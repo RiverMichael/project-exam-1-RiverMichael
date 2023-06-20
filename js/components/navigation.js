@@ -7,18 +7,18 @@ window.addEventListener("scroll", handleScroll);
 
 // Toggle Hamburger Menu
 function toggleNavigation() {
-    nav.classList.toggle("display-nav");
-};
+  nav.classList.toggle("display-nav");
+}
 
 // Nav on Scroll
 function handleScroll() {
-    const scrollY = window.scrollY;
+  const scrollY = window.scrollY;
 
-    if (scrollY > 116) {
-        nav.classList.add("scrolled");
-        navLogo.classList.add("display-navlogo");
-    } else {
-        nav.classList.remove("scrolled");
-        navLogo.classList.remove("display-navlogo");
-    };
-};
+  if (scrollY > 116) {
+    nav.classList.add("scrolled");
+    navLogo.classList.add("display-navlogo");
+  } else {
+    nav.classList.remove("scrolled");
+    navLogo.classList.remove("display-navlogo");
+  }
+}

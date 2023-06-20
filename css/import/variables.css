@@ -1,26 +1,26 @@
 :root {
-    /* Font Family */
-    --ff-heading: "Montserrat", sans-serif ;
-    --ff-body: "Hind", sans-serif;
+  /* Font Family */
+  --ff-heading: "Montserrat", sans-serif;
+  --ff-body: "Hind", sans-serif;
 
-    /* Colors */
-    --clr-white: #ffffff;
-    --clr-black: #3F423E;
-    --clr-heading: #3C493A;
-    --clr-logo: #7DA87B;
-    --clr-cta: #51804F;
-    --clr-error: darkred;
+  /* Colors */
+  --clr-white: #ffffff;
+  --clr-black: #3f423e;
+  --clr-heading: #3c493a;
+  --clr-logo: #7da87b;
+  --clr-cta: #51804f;
+  --clr-error: darkred;
 
-    /* Font weight */
-    --fw-thin: 300;
-    --fw-regular: 400;
-    --fw-bold: 700;
+  /* Font weight */
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
 
-    /* Font sizes */
-    --fs-100: 0.8rem; /* 12px */
-    --fs-200: 1rem; /* 16px */
-    --fs-300: 1.25rem; /* 20px */
-    --fs-400: 1.5rem; /* 25px */
-    --fs-500: 1.9rem; /* 31px */
-    --fs-600: 3rem; /* 48px */
+  /* Font sizes */
+  --fs-100: 0.8rem; /* 12px */
+  --fs-200: 1rem; /* 16px */
+  --fs-300: 1.25rem; /* 20px */
+  --fs-400: 1.5rem; /* 25px */
+  --fs-500: 1.9rem; /* 31px */
+  --fs-600: 3rem; /* 48px */
 }
