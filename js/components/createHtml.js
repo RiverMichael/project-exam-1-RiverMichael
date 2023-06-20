@@ -152,7 +152,7 @@ export function createPostDetailsHtml(post, parentElement) {
     .replace("</p>", "");
   instructionsContainer.append(instructionsParagraph);
 
-  parentElement.append(blogpost);
+  parentElement.append(blogPost);
 }
 
 // Image Modal
