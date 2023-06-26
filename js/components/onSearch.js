@@ -3,8 +3,8 @@ import { renderPosts } from "./render.js";
 import { createMessage } from "./createMessage.js";
 
 /**
- * Filters a search and displays the result
- * @param {*} value The search input
+ * Filters a search and renders the HTML from the results
+ * @param {*} value The search value
  * @param {*} parentElement Where to display the result
  * @param {*} postsList The list of posts to search from
  * @returns Displays the filtered list in HTML

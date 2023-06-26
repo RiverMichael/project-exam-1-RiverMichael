@@ -33,7 +33,6 @@ export function validateEmail(input, value, errorMessage) {
  * @example
  *
  * const name = document.querySelector("#name");
- *
  * validateLength(name, name.value, 3, "Please enter a name with min. 4 characters");
  */
 export function validateLength(input, value, length, errorMessage) {

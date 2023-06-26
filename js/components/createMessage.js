@@ -4,6 +4,7 @@
  * @param {string} messageType The CSS class to give the message container
  * @param {string} messageText The actuall text messate
  * @example
+ * const blogPostContainer = document.querySelector(".blogpost");
  * createMessage(blogPostContainer, "error", "There was a problem loading this blogpost")
  */
 export function createMessage(parentElement, messageType, messageText) {
