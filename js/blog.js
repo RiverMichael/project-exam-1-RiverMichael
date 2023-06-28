@@ -15,6 +15,9 @@ let postsToSort;
 sortSelect.addEventListener("change", sortPosts);
 loadPostsButton.addEventListener("click", showMorePosts);
 
+/**
+ * Fetches the blogposts and renders HTML for each post
+ */
 async function blogPosts() {
   try {
     const posts = await getPosts(currentPage, postsPerPage);
@@ -33,6 +36,9 @@ async function blogPosts() {
 blogPosts();
 
 // Load More Blog Posts
+/**
+ * Fetches more blogposts and renders HTML for each post
+ */
 async function showMorePosts() {
   try {
     if (currentPage < totalPages) {
@@ -56,6 +62,9 @@ async function showMorePosts() {
 }
 
 // // Sort Blog Posts
+/**
+ * Sets the terms for sorting the blogposts and renders HTML for the search
+ */
 function sortPosts(event) {
   const selected = event.target.value;
 

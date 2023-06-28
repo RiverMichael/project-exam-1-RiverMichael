@@ -11,6 +11,9 @@ const closeModalButton = document.querySelector(".icon-close");
 modalOverlay.addEventListener("click", () => closeModal(modalContent, modalOverlay));
 closeModalButton.addEventListener("click", () => closeModal(modalContent, modalOverlay));
 
+/**
+ * Fetches the specific blogpost and renders the HTML for the post
+ */
 async function postDetails() {
   try {
     const post = await getPostDetails();
