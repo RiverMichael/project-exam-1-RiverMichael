@@ -6,7 +6,6 @@ const searchForm = document.querySelector("form#search-form");
  * Sets the terms of where to search from and where to display the results
  * @param {*} parentElement Where to display the results
  * @param {*} searchList Where to search from
- * @returns Displays the results of the search
  * @example
  * const blogPostsContainer = document.querySelector(".blogposts");
  *
