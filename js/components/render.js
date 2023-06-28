@@ -75,7 +75,6 @@ export async function getPostDetails() {
  * Loops through and renders HTML for the the featured posts
  * @param {*} posts The posts to render
  * @param {*} parentElement Where to display the HTML
- * @returns Displays the HTML for the featured posts
  * @example
  * const featuredContainer = document.querySelector(".featuredposts");
  *
@@ -94,7 +93,6 @@ export function renderFeaturedPosts(posts, parentElement) {
  * Loops thorugh and renders HTML for the choosen page and number of posts
  * @param {*} posts The posts to render
  * @param {*} parentElement Where to display the HTML
- * @returns Displays the HTML for the choosen posts
  * @example
  * const blogPostsContainer = document.querySelector(".blogposts");
  *

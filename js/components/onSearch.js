@@ -7,7 +7,6 @@ import { createMessage } from "./createMessage.js";
  * @param {*} value The search value
  * @param {*} parentElement Where to display the result
  * @param {*} postsList The list of posts to search from
- * @returns Displays the filtered list in HTML
  */
 export function onSearch(value, parentElement, postsList) {
   const filteredPostsList = filterPostsOnSearch(postsList, value);
@@ -24,8 +23,7 @@ export function onSearch(value, parentElement, postsList) {
 /**
  * Filters a list of posts
  * @param {*} posts The list of posts to filter
- * @param {*} term What term to filter by
- * @returns A filtered list
+ * @param {*} term What terms to filter by
  */
 function filterPostsOnSearch(posts, term) {
   return posts.filter(function (post) {
