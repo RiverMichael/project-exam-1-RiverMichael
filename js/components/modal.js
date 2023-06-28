@@ -4,7 +4,7 @@
  * @param {*} modalOverlay The overlay that displays behind the modal
  * @example
  * const modalContainer = document.querySelector(".modal-content");
- * const modalOverlay = document.querySelector("modal-overlay");
+ * const modalOverlay = document.querySelector(".modal-overlay");
  *
  * openModal(modalContainer, modalOverlay);
  */
@@ -19,7 +19,7 @@ export function openModal(modalContainer, modalOverlay) {
  * @param {*} modalOverlay The overlay that displays behind the modal
  * @example
  * const modalContainer = document.querySelector(".modal-content");
- * const modalOverlay = document.querySelector("modal-overlay");
+ * const modalOverlay = document.querySelector(".modal-overlay");
  *
  * closeModal(modalContainer, modalOverlay);
  */

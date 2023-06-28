@@ -19,6 +19,9 @@ modalOverlay.addEventListener("click", () => closeModal(contactValidation, modal
 validationCloseButton.addEventListener("click", () => closeModal(contactValidation, modalOverlay));
 
 // Validate Contact Form
+/**
+ * Validates the inputs of the contact form and displays an error messages if the input is not valid
+ */
 function validateForm(event) {
   event.preventDefault();
   if (validateLength(name, name.value, 5, nameError) && validateEmail(email, email.value, emailError) && validateLength(subject, subject.value, 15, subjectError) && validateLength(message, message.value, 25, messageError)) {

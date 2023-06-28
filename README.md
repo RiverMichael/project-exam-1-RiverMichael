@@ -3,14 +3,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Noroff-FEU-Assignments/project-exam-1-RiverMichael.git">
+  <a href="https://github.com/RiverMichael/project-exam-1-RiverMichael.git">
     <img src="images/logo/color_logo-no_background.png" alt="Logo" width="300" height="">
   </a>
 
 <h3>Project Exam 1 - The Flavor Files</h3>
 <p>A blog using WordPress as CMS and fetching the content from the WordPress API.</p>
 
-<a href="https://theflavorfiles.michaelriver.dev">View live site</a> - <a href="https://github.com/Noroff-FEU-Assignments/project-exam-1-RiverMichael.git"> Link to project</a>
+<a href="https://theflavorfiles.michaelriver.dev">View live site</a> - <a href="https://github.com/RiverMichael/project-exam-1-RiverMichael.git"> Link to project</a>
 
 </div>
 
@@ -80,7 +80,7 @@ git init
 3. Clone the repo:
 
 ```sh
-git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-RiverMichael.git
+git clone https://github.com/RiverMichael/project-exam-1-RiverMichael.git
 ```
 
 ### Running
@@ -127,7 +127,7 @@ Michael "River" Nilsson - [mrn@michaelriver.dev](mailto:mrn@michaelriver.dev) - 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[github-repo]: https://github.com/Noroff-FEU-Assignments/project-exam-1-RiverMichael.git
+[github-repo]: https://github.com/RiverMichael/project-exam-1-RiverMichael.git
 [live-site]: https://theflavorfiles.michaelriver.dev
 [product-screenshot]: images/screenshot.jpg
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555

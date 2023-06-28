@@ -1,8 +1,8 @@
 /**
  * Creates a message container and displays a message
- * @param {*} parentElement Which HTML element to append the message container to
- * @param {string} messageType The CSS class to give the message container
- * @param {string} messageText The actuall text messate
+ * @param {*} parentElement The HTML element to append the message  to
+ * @param {string} messageType The CSS class to give the message
+ * @param {string} messageText The actuall text message
  * @example
  * const blogPostContainer = document.querySelector(".blogpost");
  * createMessage(blogPostContainer, "error", "There was a problem loading this blogpost")

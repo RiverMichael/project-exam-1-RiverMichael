@@ -1,8 +1,20 @@
+/**
+ * Clears the inner HTML of an element
+ * @param {*} parentElement The element to clear
+ * @example
+ * const container = document.querySelector(".container");
+ * clearHTML(container);
+ */
 export function clearHtml(parentElement) {
   parentElement.innerHTML = "";
 }
 
 // Featured (carousel) Posts
+/**
+ * Creates the HTML for a featured post
+ * @param {*} post The post to create HTML for
+ * @param {*} parentElement The element to append the HTML to
+ */
 export function createFeaturedPostHtml(post, parentElement) {
   const featuredLink = document.createElement("a");
   featuredLink.classList.add("featured-link");
@@ -31,6 +43,11 @@ export function createFeaturedPostHtml(post, parentElement) {
 }
 
 // BlogPosts Page
+/**
+ * Creates the HTML for a blogpost
+ * @param {*} post The post to create the HTML for
+ * @param {*} parentElement The element to append the HTML to
+ */
 export function createPostHtml(post, parentElement) {
   const cardLink = document.createElement("a");
   cardLink.classList.add("card-link");
@@ -72,6 +89,11 @@ export function createPostHtml(post, parentElement) {
 }
 
 // BlogPost Details Page
+/**
+ * Creates the HTML for the blogpost specific page
+ * @param {*} post The post to create the HTML for
+ * @param {*} parentElement The element to append the HTML to
+ */
 export function createPostDetailsHtml(post, parentElement) {
   const blogPost = document.createElement("div");
   blogPost.classList.add("blogpost__wrapper");
@@ -156,6 +178,11 @@ export function createPostDetailsHtml(post, parentElement) {
 }
 
 // Image Modal
+/**
+ * Creates a modal that displays a bigger image of the posts image
+ * @param {*} post The post to create the modal for
+ * @param {*} parentElement The element to append the modal to
+ */
 export function createImageModalHtml(post, parentElement) {
   const imageModal = document.createElement("img");
   imageModal.classList.add("modal-image");
@@ -166,6 +193,10 @@ export function createImageModalHtml(post, parentElement) {
 }
 
 // Subscribe Validation
+/**
+ * Creates a modal that displays a validatipn message
+ * @param {*} parentElement The element to append the modal to
+ */
 export function createSubscribeValidationHtml(parentElement) {
   const validationContainer = document.createElement("div");
   validationContainer.classList.add("subscribe-success", "flex");

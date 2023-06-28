@@ -29,6 +29,9 @@ modalOverlay.addEventListener("click", () => closeModal(subscribeContainer, moda
 subscribeClose.addEventListener("click", () => closeModal(subscribeContainer, modalOverlay));
 form.addEventListener("submit", subscribeValidation);
 
+/**
+ * Fetches and renders HTML for the featured posts in the carousel
+ */
 async function featuredPosts() {
   try {
     const posts = await getFeaturedPosts();
@@ -50,12 +53,18 @@ async function featuredPosts() {
 featuredPosts();
 
 // Show Next/Previous Posts
+/**
+ * Scrolls the carousel to the right
+ */
 function slideRight() {
   currentPosition += slideWidth;
   featuredContainer.scrollLeft += slideWidth;
   toggleCarouselButtons();
 }
 
+/**
+ * Scrolls the carousel to the left
+ */
 function slideLeft() {
   currentPosition -= slideWidth;
   featuredContainer.scrollLeft -= slideWidth;
@@ -63,6 +72,9 @@ function slideLeft() {
 }
 
 // Toggle Carousel Buttons
+/**
+ * Toggles the display and availability of the carousel buttons
+ */
 function toggleCarouselButtons() {
   if (currentPosition >= maxScroll) {
     nextButton.style.opacity = 0.2;
@@ -86,6 +98,9 @@ function toggleCarouselButtons() {
 }
 
 // Subscribe Validation
+/**
+ * Validates if the input is a valid email adress and displays an error message or a validation message
+ */
 function subscribeValidation(event) {
   event.preventDefault();
   if (validateEmail(email, email.value, emailError)) {
