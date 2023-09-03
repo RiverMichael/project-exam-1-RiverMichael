@@ -48,7 +48,7 @@
 
 This was the project exam for my first year at [Noroff](https://www.noroff.no). The assignment was to create a blog using [WordPress](https://www.wordpress.org) as CMS and then fetching the content from the WordPress API, and building a responsive website using HTML, CSS and JavaScript.
 
-The WordPress API is hosted on a droplet by [Digitalocean](https://www.digitalocean.com) and for the deployment of the website I'm using [Netlify](https://app.netlify.com).
+The WordPress API is hosted on a droplet by [Digitalocean](https://www.digitalocean.com) and for the deployment of the website I'm using [Vercel](https://www.vercel.com).
 
 ### Built With
 
@@ -121,7 +121,7 @@ Michael "River" Nilsson - [mrn@michaelriver.dev](mailto:mrn@michaelriver.dev) - 
 
 - [WordPress](https://www.wordpress.org)
 - [WordPress API](https://developer.wordpress.org/rest-api/)
-- [Netlify](https://app.netlify.com)
+- [Vercel](https://www.vercel.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
