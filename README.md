@@ -8,7 +8,7 @@
   </a>
 
 <h3>Project Exam 1 - The Flavor Files</h3>
-<p>A blog using WordPress as CMS and fetching the content from the WordPress API.</p>
+<p><i>A blog using WordPress as CMS and fetching the content from the WordPress API.</i></p>
 
 <a href="https://theflavorfiles.michaelriver.dev">View live site</a> - <a href="https://github.com/RiverMichael/project-exam-1-RiverMichael.git"> Link to project</a>
 
@@ -29,7 +29,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#running">Running</R></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -46,16 +45,13 @@
 
 ### Description
 
-This was the project exam for my first year at [Noroff](https://www.noroff.no). The assignment was to create a blog using [WordPress](https://www.wordpress.org) as CMS and then fetching the content from the WordPress API, and building a responsive website using HTML, CSS and JavaScript.
+This was my _project exam_ for my first year at [Noroff](https://www.noroff.no). The assignment was to create a blog using [WordPress](https://www.wordpress.org) as CMS and then fetch the content from the WordPress API, and build a responsive website using HTML, CSS, and JavaScript.
 
 The WordPress API is hosted on a droplet by [Digitalocean](https://www.digitalocean.com) and for the deployment of the website I'm using [Vercel](https://www.vercel.com).
 
 ### Built With
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/FrontendDevelopment/html.svg" alt="html" height="30" width="40">HTML</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/FrontendDevelopment/css.svg" alt="css" height="30" width="40">CSS</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/ProgrammingLanguages/javascript.svg" alt="javascript" height="30" width="40">JavaScript</a>
-- <a href="https://www.wordpress.org" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/wordpress.svg" alt="wordpress" height="30" width="40">WordPress</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/FrontendDevelopment/html.svg" alt="html" height="30" width="40"></a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/FrontendDevelopment/css.svg" alt="css" height="30" width="40"></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/ProgrammingLanguages/javascript.svg" alt="javascript" height="30" width="40"></a> <a href="https://www.wordpress.org" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/wordpress.svg" alt="wordpress" height="30" width="40"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,21 +67,27 @@ To get a local copy up and running follow these steps.
 
 1. Open the terminal and go to your desired folder
 
+```sh
+cd replace-with-your-desired-folder
+```
+
 2. Initialize a local Git repository
 
 ```sh
 git init
 ```
 
-3. Clone the repo:
+3. Clone the repo
 
 ```sh
 git clone https://github.com/RiverMichael/project-exam-1-RiverMichael.git
 ```
 
-### Running
+4. Navigate to the project folder
 
-Open the folder of the cloned repo in a code editor (ex. VSCode).
+```sh
+cd project-exam-1-RiverMichael
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +109,7 @@ If you want to help me make this project better, please fork the repo and create
 
 ## Contact
 
-Michael "River" Nilsson - [mrn@michaelriver.dev](mailto:mrn@michaelriver.dev) - [michaelriver.dev](https://www.michaelriver.dev)
+Michael "River" Nilsson - [mrn@michaelriver.dev](mailto:mrn@michaelriver.dev) | [michaelriver.dev](https://www.michaelriver.dev)
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
