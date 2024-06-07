@@ -8,7 +8,7 @@
   </a>
 
 <h3>Project Exam 1 - The Flavor Files</h3>
-<p><i>A blog using WordPress as CMS and fetching the content from the WordPress API.</i></p>
+<p><i>A blog using WordPress CMS and the WordPress API.</i></p>
 
 <a href="https://theflavorfiles.michaelriver.dev">View live site</a> - <a href="https://github.com/RiverMichael/project-exam-1-RiverMichael.git"> Link to project</a>
 
@@ -45,9 +45,9 @@
 
 ### Description
 
-This was my _project exam_ for my first year at [Noroff](https://www.noroff.no). The assignment was to create a blog using [WordPress](https://www.wordpress.org) as CMS and then fetch the content from the WordPress API, and build a responsive website using HTML, CSS, and JavaScript.
+This was my _project exam_ for my first year at [Noroff](https://www.noroff.no). The assignment was to create a blog using [WordPress](https://www.wordpress.org) as CMS, fetch the content from the WordPress API, and build a responsive website using HTML, CSS, and JavaScript.
 
-The WordPress API is hosted on a droplet by [Digitalocean](https://www.digitalocean.com) and for the deployment of the website I'm using [Vercel](https://www.vercel.com).
+My WordPress API is hosted on a droplet by [Digitalocean](https://www.digitalocean.com) and for the deployment of the website I used [Vercel](https://www.vercel.com).
 
 ### Built With
 
